@@ -1,0 +1,72 @@
+.outerContainer {
+  display: flex;
+  flex-direction: column;
+  background: #6EBB8C;
+  border-radius: 4px;
+  padding: 2.5vh;
+  width: 100%;
+  color: #121212;
+  margin-top: 2vh;
+}
+
+.cardHeading{
+  font-weight: 600;
+  font-size: 2vh;
+}
+
+.cardInfoHeading{
+  font-size: 4vh;
+  padding-top: 2.5vh;
+  font-weight: 600;
+}
+
+.cardInfoSub{
+  font-size: 1.8vh;
+  font-weight: 300;
+}
+
+
+
+.cardInfoSubMob{
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+
+
+  .outerContainer {
+    display: flex;
+    flex-direction: column;
+    background: #6EBB8C;
+    border-radius: 4px;
+    padding: 2.5vh;
+    width: 100%;
+    color: #121212;
+    margin-top: 2vh;
+  }
+  
+  .cardHeading{
+    font-weight: 600;
+    font-size: 2vh;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .cardInfoHeading{
+    font-size: 4vh;
+    padding-top: 1vh;
+    font-weight: 600;
+  }
+  
+  .cardInfoSub{
+    font-size: 1.8vh;
+    font-weight: 300;
+  }
+
+  .cardInfoSubMob{
+    display: flex;
+  }
+  .cardInfoSubDes{
+display: none;
+  }
+}

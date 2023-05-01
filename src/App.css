@@ -1,0 +1,15 @@
+.wrapper {
+  padding: 5vh 3.5vw;
+  background: linear-gradient(180deg, #31B099 0%, #69C28F 100%);
+  min-height: 90vh;
+}
+
+.spinnerContainer{
+  min-height: fit-content !important;
+  height: 89.9vh;
+  width: 93%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}

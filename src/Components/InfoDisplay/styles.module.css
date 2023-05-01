@@ -1,0 +1,412 @@
+.mainOuterContainer{
+display: flex;
+flex-direction: column;
+}
+
+.outerContainer {
+  display: flex;
+  flex-direction: column;
+  
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.03),
+      rgba(255, 255, 255, 0.03)
+    ),
+    #000b1f;
+  border-radius: 8px;
+  padding: 2.5vh;
+  margin-left: 1vw;
+  height: fit-content;
+}
+
+
+.dropDownButton{
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.07)), #000B1F !important;
+  border-radius: 5px;
+  border-color: rgba(255, 255, 255, 0.07) !important;
+  font-family: poppin-Medium !important;
+  width: 45vw;
+}
+
+
+
+
+.buttonContainer {
+  width: 45vw;
+  margin-top: 2vh;
+  border-radius: 5px;
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.07),
+      rgba(255, 255, 255, 0.07)
+    ),
+    #000b1f;
+  color: #F7F5E0;
+  font-size: 1.8vh;
+}
+
+.statsInfoContainer{
+  display: flex;
+ width: 100%;
+  height: 80vh;
+
+}
+
+.bigInfoCardsContainer{
+  width: 25%;
+  
+}
+
+.lastUpdatedInfo{
+  display: flex;
+  align-items: center;
+  font-size: 1.8vh;
+  color: rgba(247, 245, 223, 0.6);
+padding-top: 2vh;
+}
+
+.smallInfoCardsContainer{
+  width: 68%;
+  padding-left: 7%;
+  margin-top: 2vh;
+ 
+}
+
+.smallInfoCardsMainContainer{
+ background:  linear-gradient(0deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.07)), #000B1F;
+ padding: 2vh;
+ border-radius: 4px;
+ 
+}
+
+.smallInfoCardsContainerHeading{
+  text-transform: uppercase;
+  font-size: 2.2vh;
+  color: #F7F5E0;
+}
+
+.smallInfoCardsInnerContainer{
+  display: flex;
+  margin-left: -2%;
+}
+
+.graphContainer{
+  background:  linear-gradient(0deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.07)), #000B1F;
+  padding: 2vh;
+ border-radius: 4px;
+ margin-top: 2vh;
+ height: fit-content;
+ text-transform: capitalize;
+ font-size: 1.8vh;
+ color: rgba(247, 245, 224, 0.6);
+}
+
+.graphTopContainer{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2vh;
+}
+
+.graphTopLeftContainer{
+display: flex;
+flex-direction: column;
+}
+
+.graphTopLeftTitle{
+  font-size: 2vh;
+  color: #F7F5E0;
+}
+
+.graphTopLeftCheckbox{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5vh;
+  margin-left: -0.1vw;
+  margin-top: 0.3vh;
+}
+
+
+
+.graphTopLeftCheckbox label{
+  padding-left: 0.3vw;
+}
+
+.graphTopLeftContainer{
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5vh;
+}
+
+.graphColorCodeContainer{
+  display: flex;
+}
+
+.graphColorCodeIndicator{
+  height: 2.2vh;
+  width: 2.2vh;
+  border-radius: 0.4vh;
+  background: #9DAFCD;
+}
+
+.outdoorIndicator{
+  background: #4171C5;
+  margin-top: 1.2vh;
+}
+
+.graphColorCodeIndicatorText{
+  padding-left: 0.4vw;
+  padding-right: 1vw;
+}
+
+.graphTopPadding{
+  margin-top: 1.4vh;
+}
+
+.neighborhoodStatsContainer{
+  display: flex;
+  flex-direction: column;
+  
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.03),
+      rgba(255, 255, 255, 0.03)
+    ),
+    #000b1f;
+  border-radius: 8px;
+  padding: 2.5vh;
+  margin-left: 1vw;
+  height: 22vh;
+  margin-top: 2vh;
+  color: #F7F5E0;
+}
+
+.neighborhoodStatsContainerHeading{
+  font-size: 2.2vh;
+  text-transform: uppercase;
+  padding-left: 0.5vw;
+}
+
+.neighborhoodInfoContainer{
+  display: flex;
+  padding-top: 2vh;
+  justify-content: space-between;
+  color: #F7F5E0;
+}
+
+.neighborhoodInnerInfoContainer{
+  width: 8vw;
+  text-align: center;
+}
+
+.neighborhoodInnerInfoHeading{
+  font-size: 2.1vh;
+  text-transform: uppercase;
+font-family: Poppin-Thin;
+}
+
+.neighborhoodInnerInfoValue{
+  font-size: 5vh;
+  padding-top: 0.4vh;
+  font-weight: 600;
+}
+
+.neighborhoodInnerInfoCondition{
+  text-transform: uppercase;
+  margin-top: -0.8vh;
+  font-size: 2vh;
+}
+
+@media screen and (max-width: 800px) {
+
+  .mainOuterContainer{
+    margin-top: 2vh;
+    }
+    
+    .outerContainer {
+      display: flex;
+      flex-direction: column;
+      
+      background: linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 0.03),
+          rgba(255, 255, 255, 0.03)
+        ),
+        #000b1f;
+      border-radius: 8px;
+      padding: 1.5vh;
+      margin-left: 2vw;
+      height: fit-content;
+    }
+    
+    
+    .dropDownButton{
+      width: 88vw;
+    }
+    
+    .statsInfoContainer{
+      display: flex;
+      flex-direction: column;
+     width: 100%;
+      height: fit-content;
+    }
+    
+    .bigInfoCardsContainer{
+      width: 86%;
+      
+    }
+    
+    .lastUpdatedInfo{
+      display: flex;
+      align-items: center;
+      font-size: 1.8vh;
+      color: rgba(247, 245, 223, 0.6);
+    padding-top: 2vh;
+    width: 86%;
+    padding-bottom: 2.5vh;
+    }
+    
+    .smallInfoCardsContainer{
+      width: 100%;
+      padding-left: 0%;
+      margin-top: 2vh;
+    
+    }
+    
+    .smallInfoCardsMainContainer{
+     background:  linear-gradient(0deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.07)), #000B1F;
+     padding: 2vh;
+     border-radius: 4px;
+     
+    }
+    
+    .smallInfoCardsContainerHeading{
+      text-transform: uppercase;
+      font-size: 1.6vh;
+      color: #F7F5E0;
+    }
+    
+    .smallInfoCardsInnerContainer{
+      display: flex;
+      margin-left: -3%;
+      flex-direction: column;
+    }
+    
+    .graphContainer{
+      background:  linear-gradient(0deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.07)), #000B1F;
+      padding: 1vh;
+     border-radius: 4px;
+     margin-top: 2vh;
+     height: fit-content;
+     text-transform: capitalize;
+     font-size: 1.8vh;
+     color: rgba(240, 248, 255, 0.425);
+    }
+    
+
+
+    .graphTopContainer{
+      padding-bottom: 1.5vh;
+    }
+    
+    
+    .graphTopLeftTitle{
+      font-size: 1.4vh;
+      
+    }
+    
+    .graphTopLeftCheckbox{
+      font-size: 1.2vh;
+      margin-left: -0.1vw;
+      margin-top: 0.2vh;
+    }
+    
+    .graphTopLeftCheckbox label{
+      padding-left: 0.3vw;
+    }
+    
+    .graphTopLeftContainer{
+      font-size: 1.2vh;
+    }
+    
+    .graphColorCodeContainer{
+      display: flex;
+    }
+    
+    .graphColorCodeIndicator{
+      height: 1.8vh;
+      width: 1.8vh;
+      border-radius: 0.2vh;
+      
+    }
+    
+    .outdoorIndicator{
+      margin-top: 0.6vh;
+    }
+    
+    .graphColorCodeIndicatorText{
+      padding-left: 1.2vw;
+      padding-right: 2vw;
+    }
+    
+    .graphTopPadding{
+      margin-top: 0.6vh;
+    }
+
+
+    .neighborhoodStatsContainer{
+      display: flex;
+      flex-direction: column;
+      
+      background: linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 0.03),
+          rgba(255, 255, 255, 0.03)
+        ),
+        #000b1f;
+      border-radius: 8px;
+      padding: 1.5vh;
+      margin-left: 1vw;
+      height: 14vh;
+      margin-top: 2vh;
+      
+    }
+    
+    .neighborhoodStatsContainerHeading{
+      font-size: 1.6vh;
+      text-transform: uppercase;
+      padding-left: 0vw;
+    }
+    
+    .neighborhoodInfoContainer{
+      display: flex;
+      padding-top: 2vh;
+      justify-content: space-between;
+      color: #F7F5E0;
+      
+    }
+    
+    .neighborhoodInnerInfoContainer{
+      width: 21vw;
+      text-align: center;
+     
+    }
+    
+    .neighborhoodInnerInfoHeading{
+      font-size: 1.4vh;
+      text-transform: uppercase;
+    font-family: Poppin-Thin;
+    }
+    
+    .neighborhoodInnerInfoValue{
+      font-size: 3.5vh;
+      padding-top: 0.2vh;
+      font-weight: 600;
+    }
+    
+    .neighborhoodInnerInfoCondition{
+      text-transform: uppercase;
+      margin-top: -0.2vh;
+      font-size: 1.2vh;
+    }
+}

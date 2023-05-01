@@ -1,0 +1,122 @@
+.outerContainer {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.12)), #000B1F;;
+  border-radius: 4px;
+  padding: 2.5vh;
+  width: 100%;
+  color: #F7F5E0;
+  margin-top: 2vh;
+  margin-left: 2%;
+}
+
+.cardHeading{
+  font-weight: 600;
+  font-size: 2vh;
+}
+
+.cardInfoHeading1{
+  font-size: 5.8vh;
+  padding-top: 1.4vh;
+  font-weight: 600;
+  color: #6EBB8C;
+}
+
+.cardInfoHeadingNoInfo{
+  color: #F7F5E0;
+}
+
+.cardInfoHeading2{
+  font-size: 2vh;
+  font-weight: 600;
+  color: #6EBB8C;
+  margin-top: -1.6vh;
+}
+
+
+.cardInfoHeading2Worse{
+  color: #E96868;
+
+}
+
+.cardInfoSub1,.cardInfoSub2{
+  font-size: 1.3vh;
+  font-weight: 300;
+}
+
+.cardInfoSub1{
+  padding-top: 2vh;
+}
+
+.cardHeadingMob{
+  display: none;
+}
+
+.cardLargeInfoContainer,.cardSmallInfoContainer{
+display: flex;
+flex-direction: column;
+}
+
+
+@media screen and (max-width: 800px) {
+
+  .outerContainer {
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.12)), #000B1F;;
+    border-radius: 4px;
+    padding: 1.5vh 5vw;
+    padding-top: 0.2vh;
+    width: 70vw;
+    color: #F7F5E0;
+    margin-top: 1vh;
+    margin-left: 2%;
+  }
+  
+  .cardHeading{
+    font-weight: 600;
+    font-size: 2vh;
+  }
+  
+  .cardInfoHeading1{
+    font-size: 5.4vh;
+    padding-top: 0vh;
+    font-weight: 600;
+  }
+  
+  .cardInfoHeading2{
+    font-size: 1.8vh;
+    font-weight: 600;
+    margin-top: -1.6vh;
+  }
+
+  
+  .cardInfoSub1,.cardInfoSub2{
+    font-size: 1.3vh;
+    font-weight: 300;
+    color: #F7F5E0;
+    opacity: 0.8;
+    font-family: poppin-Thin;
+  }
+  
+  .cardInfoSub1{
+    padding-top: 0.5vh;
+  }
+
+.cardHeadingDekstop{
+  display: none;
+}
+.cardHeadingMob{
+  display: flex;
+}
+
+.cardLargeInfoContainer{
+padding-left: 3vw;
+
+}
+.cardSmallInfoContainer{
+  padding-left: 8vw;
+  padding-top: 2vh;
+}
+
+}

@@ -1,0 +1,135 @@
+.mainContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 1vh;
+}
+
+.infoCard{
+  background-color: #ffffff;
+  padding: 2vh 1.8vw;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 1.5vh;
+} 
+
+.infoCard2{
+  width: 44.4%;
+} 
+
+.logoImage {
+  height: 3.5vh;
+  background-color: #69C28F;
+  padding: 1.5vh;
+  border-radius: 1vh;
+}
+
+.infoTitle{
+  color: #212121;
+  font-size: 2.2vh;
+  text-transform: uppercase;
+  width:82%;
+  font-weight: 600;
+}
+
+.infoCard2 .infoTitle{
+  width:57%;
+}
+.infoOutdoorCard .infoTitle{
+  width:40%;
+  padding: 1vh 0vw;
+}
+
+
+.infoValue{
+  font-size: 4.4vh;
+  color: black;
+  padding-right: 2vw;
+  font-weight: 900;
+  width:24%;
+  text-align: right;
+}
+
+.infoOutdoorValue{
+  width: 40%;
+}
+
+
+.infoCard2 .infoValue {
+  padding-right: 1vw;
+}
+
+.infoValue span{
+  font-size:  1.6vh;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.infoValue span:nth-child(2){
+  padding-top: 1vh;
+}
+
+.infoValue span div{
+  font-size:  2.6vh;
+}
+
+
+@media screen and (max-width: 800px) {
+
+  .mainContainer {
+    border-bottom: 0px solid rgba(247, 245, 223, 0.6);
+   flex-direction: column;
+    padding-top: 0.5vh;
+    padding-bottom: 1vh;
+    justify-content: space-between;
+  }
+  
+  .logoContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logoImage1 {
+    height: 6vh;
+  }
+  
+  .logoImage2 {
+    margin-left: 5vw;
+    height: 2.4vh;
+    font-size: 3vh;
+    margin-top: -2.2vh;
+  }
+  
+  .imageSeperatorBorder {
+    border: 1.5px solid #F7F5E0;
+    border-radius: 2px;
+    background-color: #F7F5E0;
+    height: 4vh;
+    margin-left: 1vw;
+  }
+  
+  .infoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2vh;
+    color: rgba(247, 245, 223, 0.6);
+    padding-left: 10vw;
+    padding-top: 1vh;
+    display: none;
+  }
+  
+  .infoInnerContainer {
+    width: 98vw;
+    
+  }
+  .infoInnerContainer div{
+    padding-top: 0.8vh;
+  }
+
+
+}

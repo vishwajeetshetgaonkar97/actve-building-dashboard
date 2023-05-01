@@ -1,0 +1,19 @@
+.radioOuterContainer {
+  height: 3vh;
+  width: 3vh;
+  border: 2px solid;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.radioActiveIndicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1.5vh;
+  width: 1.5vh;
+  border-radius: 50%;
+  margin-left: 0.05vh;
+}

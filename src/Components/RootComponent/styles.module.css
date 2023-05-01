@@ -1,0 +1,14 @@
+.mainContainer {
+  display: flex;
+  padding: 8vh 10vw;
+  padding-bottom: 2vh;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 800px) {
+  .mainContainer {
+  flex-direction: column;
+    margin-top: 2vh;
+    
+  }
+}

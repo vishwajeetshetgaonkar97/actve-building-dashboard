@@ -1,0 +1,127 @@
+.mainContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 1vh;
+}
+
+.infoCard{
+  background-color: #ffffff;
+  padding: 2vh 1.8vw;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-radius: 1.5vh;
+} 
+
+.infoImageContainer{
+  background-color: #69C28F;
+  padding: 1.5vh;
+  border-radius: 1vh;
+  height: 86%;
+  width: 4vw;
+  display: flex;
+  justify-content: center;
+
+}
+.logoImage {
+  height: 2.4rem;
+}
+
+.infoTitle{
+  color: #212121;
+  font-size: 3.2vh;
+  text-transform: uppercase;
+  width:58%;
+  padding-bottom: 2vh;
+  
+}
+
+.infoTitle div{
+ padding-bottom: 2vh;
+ font-size: 2.8vh;
+ color: #121212;
+ font-weight: 700;
+}
+
+.infoTitle span{
+  font-size: 2.4vh;
+  font-weight: 400;
+  text-transform: lowercase;
+ }
+
+.infoValue{
+  font-size: 5vh;
+  color: #121212;
+  padding-right: 2vw;
+  padding-bottom: 2vh;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: 25%;
+  text-align: right;
+}
+
+.childContainer1{
+  display: flex;
+  width: 100%;
+  height: 25vh;
+}
+
+
+
+@media screen and (max-width: 800px) {
+
+  .mainContainer {
+    border-bottom: 0px solid rgba(247, 245, 223, 0.6);
+   flex-direction: column;
+    padding-top: 0.5vh;
+    padding-bottom: 1vh;
+    justify-content: space-between;
+  }
+  
+  .logoContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logoImage1 {
+    height: 6vh;
+  }
+  
+  .logoImage2 {
+    margin-left: 5vw;
+    height: 2.4vh;
+    font-size: 3vh;
+    margin-top: -2.2vh;
+  }
+  
+  .imageSeperatorBorder {
+    border: 1.5px solid #F7F5E0;
+    border-radius: 2px;
+    background-color: #F7F5E0;
+    height: 4vh;
+    margin-left: 1vw;
+  }
+  
+  .infoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2vh;
+    color: rgba(247, 245, 223, 0.6);
+    padding-left: 10vw;
+    padding-top: 1vh;
+    display: none;
+  }
+  
+  .infoInnerContainer {
+    width: 98vw;
+    
+  }
+  .infoInnerContainer div{
+    padding-top: 0.8vh;
+  }
+
+
+}

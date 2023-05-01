@@ -1,0 +1,183 @@
+.outerContainer {
+  display: flex;
+  flex-direction: column;
+  
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.03),
+      rgba(255, 255, 255, 0.03)
+    ),
+    #000b1f;
+  border-radius: 8px;
+  padding: 2.5vh;
+}
+
+.demoTick:hover{
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.mapContainer {
+  height: 40vh;
+  width: 45vw;
+  background-color: rgba(240, 248, 255, 0.272);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.buttonContainer {
+  width: 45vw;
+  margin-top: 2vh;
+  border-radius: 5px;
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.07),
+      rgba(255, 255, 255, 0.07)
+    ),
+    #000b1f;
+  color: #F7F5E0;
+  font-size: 1.8vh;
+}
+
+.buttonTopContainer {
+  padding: 2vh;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #F7F5E080;
+  padding-bottom: 3.8vh;
+}
+
+.infoInnerContainer {
+  width: 50%;
+  padding-top: 0.8vh;
+}
+
+.bottomInfo {
+  padding-top: 1.5vh;
+}
+
+.buildingContainer {
+  padding: 2vh;
+  padding-bottom: 0vh;
+}
+
+.buildingContainerTitle {
+  text-transform: uppercase;
+}
+
+.buildingButtonContainer{
+padding-left: 2vh;
+display: flex;
+flex-direction: column;
+height: 60vh;
+  overflow-y: scroll;
+}
+
+.buildingButton{
+  border-color: #F7F5E0 !important;
+  color: #F7F5E0 !important;
+  font-family: poppin-Medium !important;
+  font-size: 2vh !important;
+  min-width: 45%;
+  width: fit-content;
+  justify-content: flex-start !important;
+  border-radius: 2px !important;
+  border-width: 1.5px !important;
+  height: 6vh !important;
+  margin-top: 2vh !important;
+  /* overflow: hidden !important; */
+}
+
+.buildingButtonActive{
+  background-color: #F7F5E0 !important;
+  color: #121C2F !important;
+  font-weight: 700 !important ;
+}
+
+@media screen and (max-width: 800px) {
+
+  .outerContainer {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.03)), #000B1F;
+    border-radius: 8px;
+    padding: 1.5vh;
+    margin-left: 2vw;
+    width: 90vw;
+   
+  }
+  
+  .mapContainer {
+    height: 24vh;
+    width: 90vw;
+    background-color: rgba(240, 248, 255, 0.272);
+    border-radius: 5px;
+  }
+  
+  .buttonContainer {
+    width: 90vw;
+    margin-top: 2vh;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0);
+    font-size: 1.4vh;
+    height: 100%;
+  }
+  
+  .buttonTopContainer {
+    padding: 0vh;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0px solid #F7F5E080;
+    padding-bottom: 2.5vh;
+  }
+  
+  .infoInnerContainer {
+    width: 100%;
+    padding-top: 0.4vh;
+  }
+  
+  .bottomInfo {
+    padding-top: 1vh;
+  }
+  
+  .buildingContainer {
+    padding: 0vh;
+    padding-bottom: 0vh;
+  }
+  
+  .buildingContainerTitle {
+    text-transform: uppercase;
+    font-size: 1.7vh;
+  }
+  
+  .buildingButtonContainer{
+  padding-left: 0vh;
+  padding-bottom: 1vh;
+  display: flex;
+  flex-direction: column;
+  }
+  
+  .buildingButton{
+    border-color: #F7F5E0 !important;
+    color: #F7F5E0 !important;
+    font-family: poppin-Medium !important;
+    font-size: 1.6vh !important;
+    /* width: 65% !important; */
+    min-width: 65%;
+    max-width: 98%;
+    justify-content: flex-start !important;
+    border-radius: 2px !important;
+    border-width: 1.5px !important;
+     padding: 2vh !important;
+    margin-top: 1.6vh !important;
+    overflow: hidden !important;
+  }
+  
+  .buildingButtonActive{
+    background-color: #F7F5E0 !important;
+    color: #121C2F !important;
+    font-weight: 700 !important ;
+  }
+
+
+}

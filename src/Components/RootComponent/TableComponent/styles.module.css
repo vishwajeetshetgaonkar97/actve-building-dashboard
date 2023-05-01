@@ -1,0 +1,139 @@
+.mainContainer {
+  width: 76%;
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+  box-shadow: inset 0px 6px 24px rgba(0, 0, 0, 0.15);
+  padding: 3vh 12vw;
+}
+
+.innerContainer{
+  border: 1px solid black;
+  width: 98%;
+  border-radius: 2vh;
+}
+
+.infoCard{
+  background-color: #ffffff;
+  padding: 2vh 1.8vw;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 1.5vh;
+} 
+
+.logoImage {
+  height: 3.5vh;
+  background-color: #69C28F;
+  padding: 1.5vh;
+  border-radius: 1vh;
+}
+
+.infoTitle{
+  color: #212121;
+  font-size: 1.8vh;
+  text-transform: uppercase;
+  width:82%;
+}
+
+.infoValue{
+  font-size: 4.4vh;
+  color: black;
+  padding-right: 2vw;
+}
+.logoImage2 {
+  margin-left: 1.5vw;
+  height: 2.5vh;
+  font-size: 2.8vh;
+  /* font-family: poppin-Medium; */
+  color: #ffffff;
+  text-transform: uppercase;
+  
+  font-weight: 800;
+}
+
+.imageSeperatorBorder {
+  border: 1.5px solid #ffffff;
+  background-color: #ffffff;
+  height: 3.8vh;
+  margin-left: 1vw;
+}
+
+.infoContainer {
+  display: flex;
+  align-items: center;
+  font-size: 2vh;
+  color: rgb(255, 255, 255);
+  padding-left: 1vw;
+  background: rgba(47, 109, 100, 0.8);
+  box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 1.5vh;
+  width: 58vw;
+  height: 6vh;
+}
+
+.infoContainer span{
+  padding: 0vw 0.8vw;
+}
+
+.infoContainer span:first-child{
+  border-right: 1.5px solid white;
+}
+
+
+@media screen and (max-width: 800px) {
+
+  .mainContainer {
+    border-bottom: 0px solid rgba(247, 245, 223, 0.6);
+   flex-direction: column;
+    padding-top: 0.5vh;
+    padding-bottom: 1vh;
+    justify-content: space-between;
+  }
+  
+  .logoContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logoImage1 {
+    height: 6vh;
+  }
+  
+  .logoImage2 {
+    margin-left: 5vw;
+    height: 2.4vh;
+    font-size: 3vh;
+    margin-top: -2.2vh;
+  }
+  
+  .imageSeperatorBorder {
+    border: 1.5px solid #F7F5E0;
+    border-radius: 2px;
+    background-color: #F7F5E0;
+    height: 4vh;
+    margin-left: 1vw;
+  }
+  
+  .infoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2vh;
+    color: rgba(247, 245, 223, 0.6);
+    padding-left: 10vw;
+    padding-top: 1vh;
+    display: none;
+  }
+  
+  .infoInnerContainer {
+    width: 98vw;
+    
+  }
+  .infoInnerContainer div{
+    padding-top: 0.8vh;
+  }
+
+
+}

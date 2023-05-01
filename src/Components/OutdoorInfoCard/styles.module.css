@@ -1,0 +1,148 @@
+.infoCard{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* background-color: aqua; */
+} 
+
+.infoCardTitle{
+  font-size:2vh;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #121212;
+  padding-left: 1.2%;
+}
+
+.innerInfoCard{
+  background-color: #ffffff;
+  padding: 1% 1%;
+  width: 98%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-radius: 1.5vh;
+  box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.05);
+  height: 32%;
+  margin-top: 0.5%;
+}
+
+.infoImageContainer{
+  background-color: #69C28F;
+  padding: 0.5%;
+  border-radius: 1vh;
+  height: 90%;
+  width: 4%;
+  display: flex;
+  justify-content: center;
+
+}
+.logoImage {
+  height: 1.5rem;
+}
+
+.infoTitle{
+  color: #212121;
+
+  text-transform: uppercase;
+  width:94%;
+ height: 100%;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+  /* background-color: antiquewhite; */
+}
+
+.infoTitle div{
+ font-size: 0.8rem;
+ color: #121212;
+ font-weight: 400;
+padding-top: 0.5rem;
+}
+
+.infoTitle span{
+  display: flex;
+  font-size: 1.4rem;
+  font-weight: 600;
+  justify-content: baseline;
+  width: 100%;
+  align-items: baseline;
+ }
+
+ .infoTitle span div{
+  font-size: 1.2rem;
+  font-weight: 600;
+ width: 50%;
+ }
+
+.infoValue{
+  font-size: 1rem !important;
+  color: #121212;
+  font-weight: 400 !important;
+  width: 50%;
+  text-align: right;
+  text-transform: lowercase;
+}
+
+.childContainer1{
+  display: flex;
+  width: 100%;
+  height: 25vh;
+}
+
+
+
+@media screen and (max-width: 800px) {
+
+  .mainContainer {
+    border-bottom: 0px solid rgba(247, 245, 223, 0.6);
+   flex-direction: column;
+    padding-top: 0.5vh;
+    padding-bottom: 1vh;
+    justify-content: space-between;
+  }
+  
+  .logoContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logoImage1 {
+    height: 6vh;
+  }
+  
+  .logoImage2 {
+    margin-left: 5vw;
+    height: 2.4vh;
+    font-size: 3vh;
+    margin-top: -2.2vh;
+  }
+  
+  .imageSeperatorBorder {
+    border: 1.5px solid #F7F5E0;
+    border-radius: 2px;
+    background-color: #F7F5E0;
+    height: 4vh;
+    margin-left: 1vw;
+  }
+  
+  .infoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2vh;
+    color: rgba(247, 245, 223, 0.6);
+    padding-left: 10vw;
+    padding-top: 1vh;
+    display: none;
+  }
+  
+  .infoInnerContainer {
+    width: 98vw;
+    
+  }
+  .infoInnerContainer div{
+    padding-top: 0.8vh;
+  }
+
+
+}
