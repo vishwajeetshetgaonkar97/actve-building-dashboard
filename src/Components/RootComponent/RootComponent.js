@@ -130,7 +130,7 @@ const RootComponent = ({ outdoorInfo = false }) => {
               {getIfTemperatureHumidityVisible(partnerData) && (
                 <TemperatureHumidityComponent outdoorInfo={outdoorInfo} />
               )}
-              {!outdoorInfo ? (
+              {outdoorInfo === 'true' ? (
                 <OutdoorPmValueComponent />
               ) : (
                 <PmValueComponent />

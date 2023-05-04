@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import ActiveBuildingLogoImage from '../../Assets/ActiveBuildingsLogo.png';
 import styles from './styles.module.css';
+import PartnerDataContext from '../../Contexts/PartnerDataContext';
 
 const TopBar = () => {
+  const { partnerData } = useContext(PartnerDataContext);
+
   return (
     <div className={styles.mainContainer}>
       <div className={styles.logoContainer}>
@@ -18,13 +21,15 @@ const TopBar = () => {
           alt="driv logo"
         /> */}
         <div className={styles.logoImage2}>Real time air quality </div>
-
-
       </div>
 
       <div className={styles.infoContainer}>
-<span>
-JASLOK HOSPITAL IVF </span>  <span>MAIN OT</span>   
+        <span>
+          {partnerData && partnerData.display_name
+            ? partnerData.display_name
+            : ''}{' '}
+        </span>{' '}
+        <span>MAIN OT</span>
       </div>
     </div>
   );

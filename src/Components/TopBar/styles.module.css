@@ -3,6 +3,7 @@
   padding-top: 0.5vh;
   padding-bottom: 1vh;
   justify-content: space-between;
+  text-transform: uppercase;
 }
 
 .logoContainer {

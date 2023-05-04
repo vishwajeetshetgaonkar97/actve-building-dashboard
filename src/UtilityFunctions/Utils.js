@@ -412,9 +412,9 @@ const getIfTemperatureHumidityVisible = partnerInfo => {
 };
 
 const getIfOutdoorTemperatureHumidityVisible = partnerInfo => {
-  if (!outdoorInfo) return false;
   if (
     outdoorInfo &&
+    outdoorInfo === 'true' &&
     partnerInfo &&
     partnerInfo.indoor_params &&
     partnerInfo.external_device_log &&
