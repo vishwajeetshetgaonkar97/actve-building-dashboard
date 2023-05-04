@@ -20,6 +20,10 @@
 
 }
 
+.infoImage3{
+  height: 92.5%;
+}
+
 .infoImageBadContainer{
   background-color: #E96868;
 }
@@ -45,6 +49,10 @@
   width:78%; 
 }
 
+.infoTitle4{
+  width:69%; 
+}
+
 .infoTitle div{
  padding-bottom:1.4%;
  font-size: 0.9rem;
@@ -53,10 +61,7 @@
 }
 
 .infoTitle2 div{
-  padding-bottom:8%;
-  font-size: 0.9rem;
-  color: #121212;
-  font-weight: 700;
+  padding-bottom:9%;
  }
 
 .infoTitle span{

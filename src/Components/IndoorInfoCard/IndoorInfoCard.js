@@ -18,6 +18,7 @@ const IndoorInfoCard = ({
   value = 0,
   condition = '',
   noOfCards = 1,
+  isLong=false,
 }) => {
   const { partnerData } = useContext(PartnerDataContext);
 
@@ -30,7 +31,7 @@ const IndoorInfoCard = ({
   return (
     <div className={styles.infoCard}>
       <div
-        className={`${styles.infoImageContainer} ${condition === 'bad' &&
+        className={`${styles.infoImageContainer} ${isLong && styles.infoImage3} ${condition === 'bad' &&
           styles.infoImageBadContainer} ${condition === 'moderate' &&
           styles.infoImageModerateContainer} `}
       >
@@ -38,8 +39,7 @@ const IndoorInfoCard = ({
       </div>
 
       <div
-        className={`${styles.infoTitle} ${noOfCards === 2 &&
-          styles.infoTitle2}`}
+        className={`${styles.infoTitle} ${noOfCards >= 2 && styles.infoTitle2} ${noOfCards >= 4 && styles.infoTitle4}`}
       >
         <div>{title}</div>
         {noOfCards >= 2 && (

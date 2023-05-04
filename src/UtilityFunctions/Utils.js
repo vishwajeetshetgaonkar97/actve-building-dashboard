@@ -509,7 +509,43 @@ const getPm10Value = partnerInfo => {
     partnerInfo.data_logs[0].pm10 &&
     partnerInfo.data_logs[0].pm10.value
   )
-    return `${partnerInfo.data_logs[0].pm25.value} ug/m3`;
+    return `${partnerInfo.data_logs[0].pm10.value} ug/m3`;
+  return `-`;
+};
+
+const gettvocValue = partnerInfo => {
+  if (
+    partnerInfo &&
+    partnerInfo.data_logs &&
+    partnerInfo.data_logs[0] &&
+    partnerInfo.data_logs[0].tvoc &&
+    partnerInfo.data_logs[0].tvoc.value
+  )
+    return `${partnerInfo.data_logs[0].tvoc.value} ug/m3`;
+  return `-`;
+};
+
+const gettco2Value = partnerInfo => {
+  if (
+    partnerInfo &&
+    partnerInfo.data_logs &&
+    partnerInfo.data_logs[0] &&
+    partnerInfo.data_logs[0].co2 &&
+    partnerInfo.data_logs[0].co2.value
+  )
+    return `${partnerInfo.data_logs[0].co2.value} ug/m3`;
+  return `-`;
+};
+
+const gettso2Value = partnerInfo => {
+  if (
+    partnerInfo &&
+    partnerInfo.data_logs &&
+    partnerInfo.data_logs[0] &&
+    partnerInfo.data_logs[0].so2 &&
+    partnerInfo.data_logs[0].so2.value
+  )
+    return `${partnerInfo.data_logs[0].so2.value} ug/m3`;
   return `-`;
 };
 
@@ -524,8 +560,17 @@ const getIndoorInfoName = (partnerInfo, index = 0) => {
     case 'pm25':
       return 'pm 2.5';
 
-      case 'pm10':
-        return 'pm 10';
+    case 'pm10':
+      return 'pm 10';
+
+    case 'tvoc':
+      return 'tvoc';
+
+    case 'co2':
+      return 'co2';
+
+      case 'so2':
+        return "so2"
 
     default:
       return '-';
@@ -542,8 +587,18 @@ const getIndoorInfoValue = (partnerInfo, index = 0) => {
     case 'pm25':
       return getPm25Value(partnerInfo);
 
-      case 'pm10':
+    case 'pm10':
       return getPm10Value(partnerInfo);
+
+    case 'tvoc':
+      return gettvocValue(partnerInfo);
+
+    case 'co2':
+      return gettco2Value(partnerInfo);
+
+      case 'so2':
+      return gettso2Value(partnerInfo);
+      
 
     default:
       return '-';
@@ -559,10 +614,11 @@ const getIndoorInfoValueCondition = (partnerInfo, index = 0) => {
     dataLog[getParametersExcludingTempHum(partnerInfo)[index]],
   );
 
-    return getParameterText(
-      dataLog[getParametersExcludingTempHum(partnerInfo)[index]].incident_level,
-    );
+  if (!dataLog[getParametersExcludingTempHum(partnerInfo)[index]]) return '-';
 
+  return getParameterText(
+    dataLog[getParametersExcludingTempHum(partnerInfo)[index]].incident_level,
+  );
 };
 
 export default getFixedDigitsNumber;
