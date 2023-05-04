@@ -13,7 +13,7 @@ import {
 } from '../../UtilityFunctions/Utils';
 import PartnerDataContext from '../../Contexts/PartnerDataContext';
 
-const TemperatureHumidityComponent = () => {
+const TemperatureHumidityComponent = ({ outdoorInfo }) => {
   const { partnerData } = useContext(PartnerDataContext);
 
   return (
@@ -38,12 +38,16 @@ const TemperatureHumidityComponent = () => {
         >
           {!getIfOutdoorTemperatureHumidityVisible(partnerData) &&
             getTemperature(partnerData)}
-          <span>
-            indoor <div>{getTemperature(partnerData)}</div>
-          </span>
-          <span>
-            outdoor <div>{getOutdoorTemperature(partnerData)}</div>
-          </span>
+          {getIfOutdoorTemperatureHumidityVisible(partnerData) && (
+            <>
+              <span>
+                indoor <div>{getTemperature(partnerData)}</div>
+              </span>
+              <span>
+                outdoor <div>{getOutdoorTemperature(partnerData)}</div>
+              </span>
+            </>
+          )}
         </div>
       </div>
 
@@ -69,12 +73,17 @@ const TemperatureHumidityComponent = () => {
             {!getIfOutdoorTemperatureHumidityVisible(partnerData) &&
               getHumidity(partnerData)}
 
-            <span>
-              indoor <div>{getHumidity(partnerData)}</div>
-            </span>
-            <span>
-              outdoor <div>{getOutdoorHumidity(partnerData)}</div>
-            </span>
+            {getIfOutdoorTemperatureHumidityVisible(partnerData) && (
+              <>
+                {' '}
+                <span>
+                  indoor <div>{getHumidity(partnerData)}</div>
+                </span>
+                <span>
+                  outdoor <div>{getOutdoorHumidity(partnerData)}</div>
+                </span>
+              </>
+            )}
           </div>
         </div>
       )}

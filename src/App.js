@@ -14,7 +14,7 @@ function App() {
 
   const urlSearchParams = new URLSearchParams(window.location.search);
   const params = Object.fromEntries(urlSearchParams.entries());
-  const { unique_id = '' } = params;
+  const { unique_id = '',outdoorInfo=false } = params;
 
   const getPartnerParameters = async () => {
     try {
@@ -47,8 +47,8 @@ function App() {
     <PartnerDataContext.Provider value={PartnerDataContextValue}>
       <>
         <div className="wrapper">
-          <TopBar />
-          <RootComponent />
+          <TopBar/>
+          <RootComponent outdoorInfo={outdoorInfo}/>
         </div>
 
         {/* <TableComponent /> */}

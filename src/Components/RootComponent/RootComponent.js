@@ -21,7 +21,7 @@ import PmValueComponent from '../PmValueComponent/PmValueComponent';
 import TableComponent from './TableComponent/TableComponent';
 import OutdoorPmValueComponent from '../OutdoorPmValueComponent/OutdoorPmValueComponent';
 
-const RootComponent = () => {
+const RootComponent = ({ outdoorInfo = false }) => {
   const [buildingIndex, setBuildingIndex] = useState(0);
   const [buildingDeviceValue, setBuildingDeviceValue] = useState(null);
 
@@ -113,6 +113,8 @@ const RootComponent = () => {
     getDeviceLatestLogInfo(buildingIndex);
   }, [buildingDeviceValue]);
 
+  console.log('out', outdoorInfo);
+
   return (
     <BuildingDataContext.Provider value={BuildingDataContextValue}>
       <BuildingDeviceListDataContext.Provider
@@ -126,9 +128,9 @@ const RootComponent = () => {
           >
             <div className={styles.mainContainer}>
               {getIfTemperatureHumidityVisible(partnerData) && (
-                <TemperatureHumidityComponent />
+                <TemperatureHumidityComponent outdoorInfo={outdoorInfo} />
               )}
-              {getIfOutdoorTemperatureHumidityVisible(partnerData) ? (
+              {!outdoorInfo ? (
                 <OutdoorPmValueComponent />
               ) : (
                 <PmValueComponent />

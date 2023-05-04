@@ -1,0 +1,86 @@
+
+.infoCard{
+  background-color: #ffffff;
+  padding: 2% 2%;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-radius: 1.5vh;
+} 
+
+.infoImageContainer{
+  background-color: #69C28F;
+  padding: 0.6rem;
+  border-radius: 1vh;
+  height: 86%;
+  width: 3.4rem;
+  display: flex;
+  justify-content: center;
+
+}
+
+.infoImageBadContainer{
+  background-color: #E96868;
+}
+
+.infoImageModerateContainer{
+  background-color: #F4B465;
+}
+
+.logoImage {
+  height: 2.4rem;
+}
+
+.infoTitle{
+  color: #212121;
+  font-size: 3.2vh;
+  text-transform: uppercase;
+  width:58%;
+  padding-bottom: 0.8%;
+  
+}
+
+.infoTitle2{
+  width:78%; 
+}
+
+.infoTitle div{
+ padding-bottom:1.4%;
+ font-size: 0.9rem;
+ color: #121212;
+ font-weight: 700;
+}
+
+.infoTitle2 div{
+  padding-bottom:8%;
+  font-size: 0.9rem;
+  color: #121212;
+  font-weight: 700;
+ }
+
+.infoTitle span{
+  font-size: 2.4vh;
+  font-weight: 400;
+  text-transform: lowercase;
+ }
+
+.infoValue{
+  font-size: 5vh;
+  color: #121212;
+  padding-right: 2vw;
+  padding-bottom: 2vh;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: 25%;
+  text-align: right;
+}
+
+.infoValue2{
+  padding-right: 0vw !important;
+  padding-bottom: 0.5vh !important;
+  font-size: 4vh !important;
+  text-align: left;
+}
+
+

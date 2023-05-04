@@ -1,15 +1,8 @@
-const PIXELLOT_TEMPLATES = ['CUSTOM_17'];
-
-const isPixellotTemplate = gameStateData => {
-  if (!gameStateData) return false;
-
-  const template = gameStateData.config_data.theme;
-  return PIXELLOT_TEMPLATES.includes(template);
-};
+const urlSearchParams = new URLSearchParams(window.location.search);
+const params = Object.fromEntries(urlSearchParams.entries());
+const { unique_id = '', outdoorInfo = false } = params;
 
 const getFixedDigitsNumber = (number = 0, gameStateData = null) => {
-  if (isPixellotTemplate(gameStateData)) return number;
-
   return number.toLocaleString('en-US', {
     minimumIntegerDigits: 2,
     useGrouping: false,
@@ -51,6 +44,7 @@ const getParameterBackgroundColor = (value = '') => {
 };
 
 const getParameterText = (value = '') => {
+  console.log('val', value);
   switch (value) {
     case 0: {
       return 'good';
@@ -418,9 +412,12 @@ const getIfTemperatureHumidityVisible = partnerInfo => {
 };
 
 const getIfOutdoorTemperatureHumidityVisible = partnerInfo => {
+  if (!outdoorInfo) return false;
   if (
+    outdoorInfo &&
     partnerInfo &&
-    partnerInfo.indoor_params && partnerInfo.external_device_log &&
+    partnerInfo.indoor_params &&
+    partnerInfo.external_device_log &&
     (partnerInfo.indoor_params.includes('temp') ||
       partnerInfo.indoor_params.includes('hum'))
   )
@@ -450,8 +447,6 @@ const getIfHumidityVisible = partnerInfo => {
   return false;
 };
 
-
-
 const getTemperature = partnerInfo => {
   if (
     partnerInfo &&
@@ -463,7 +458,6 @@ const getTemperature = partnerInfo => {
   return `-`;
 };
 
-
 const getOutdoorTemperature = partnerInfo => {
   if (
     partnerInfo &&
@@ -473,7 +467,6 @@ const getOutdoorTemperature = partnerInfo => {
     return `${partnerInfo.external_device_log.temp.value}°C`;
   return `-`;
 };
-
 
 const getHumidity = partnerInfo => {
   if (
@@ -500,7 +493,7 @@ const getPm25Value = partnerInfo => {
   if (
     partnerInfo &&
     partnerInfo.data_logs &&
-    partnerInfo.data_logs[0]  &&
+    partnerInfo.data_logs[0] &&
     partnerInfo.data_logs[0].pm25 &&
     partnerInfo.data_logs[0].pm25.value
   )
@@ -512,7 +505,7 @@ const getPm10Value = partnerInfo => {
   if (
     partnerInfo &&
     partnerInfo.data_logs &&
-    partnerInfo.data_logs[0]  &&
+    partnerInfo.data_logs[0] &&
     partnerInfo.data_logs[0].pm10 &&
     partnerInfo.data_logs[0].pm10.value
   )
@@ -520,6 +513,57 @@ const getPm10Value = partnerInfo => {
   return `-`;
 };
 
+const getIndoorInfoName = (partnerInfo, index = 0) => {
+  if (!partnerInfo || !partnerInfo.data_logs) return `-`;
+
+  const dataLog = partnerInfo.data_logs[0];
+  const parameter = dataLog[getParametersExcludingTempHum(partnerInfo)[index]];
+  console.log('paraaaaa', getParametersExcludingTempHum(partnerInfo)[index]);
+
+  switch (getParametersExcludingTempHum(partnerInfo)[index]) {
+    case 'pm25':
+      return 'pm 2.5';
+
+      case 'pm10':
+        return 'pm 10';
+
+    default:
+      return '-';
+  }
+};
+
+const getIndoorInfoValue = (partnerInfo, index = 0) => {
+  if (!partnerInfo || !partnerInfo.data_logs) return `-`;
+
+  const dataLog = partnerInfo.data_logs[0];
+  console.log('para', getParametersExcludingTempHum(partnerInfo)[index]);
+
+  switch (getParametersExcludingTempHum(partnerInfo)[index]) {
+    case 'pm25':
+      return getPm25Value(partnerInfo);
+
+      case 'pm10':
+      return getPm10Value(partnerInfo);
+
+    default:
+      return '-';
+  }
+};
+
+const getIndoorInfoValueCondition = (partnerInfo, index = 0) => {
+  if (!partnerInfo || !partnerInfo.data_logs) return `-`;
+
+  const dataLog = partnerInfo.data_logs[0];
+  console.log(
+    'connnnn',
+    dataLog[getParametersExcludingTempHum(partnerInfo)[index]],
+  );
+
+    return getParameterText(
+      dataLog[getParametersExcludingTempHum(partnerInfo)[index]].incident_level,
+    );
+
+};
 
 export default getFixedDigitsNumber;
 
@@ -556,4 +600,7 @@ export {
   getIfOutdoorTemperatureHumidityVisible,
   getOutdoorTemperature,
   getOutdoorHumidity,
+  getIndoorInfoName,
+  getIndoorInfoValue,
+  getIndoorInfoValueCondition,
 };

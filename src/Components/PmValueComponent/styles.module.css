@@ -5,61 +5,13 @@
   margin: 1vh;
 }
 
-.infoCard{
-  background-color: #ffffff;
-  padding: 2vh 1.8vw;
+.column1{
+  display: flex;
   width: 100%;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  border-radius: 1.5vh;
-} 
-
-.infoImageContainer{
-  background-color: #69C28F;
-  padding: 1.5vh;
-  border-radius: 1vh;
-  height: 86%;
-  width: 4vw;
-  display: flex;
-  justify-content: center;
-
-}
-.logoImage {
-  height: 2.4rem;
 }
 
-.infoTitle{
-  color: #212121;
-  font-size: 3.2vh;
-  text-transform: uppercase;
-  width:58%;
-  padding-bottom: 2vh;
-  
-}
-
-.infoTitle div{
- padding-bottom: 2vh;
- font-size: 2.8vh;
- color: #121212;
- font-weight: 700;
-}
-
-.infoTitle span{
-  font-size: 2.4vh;
-  font-weight: 400;
-  text-transform: lowercase;
- }
-
-.infoValue{
-  font-size: 5vh;
-  color: #121212;
-  padding-right: 2vw;
-  padding-bottom: 2vh;
-  font-weight: 700;
-  text-transform: uppercase;
-  width: 25%;
-  text-align: right;
+.column12{
+justify-content: space-between;
 }
 
 .childContainer1{
@@ -67,6 +19,11 @@
   width: 100%;
   height: 25vh;
 }
+
+.childContainer12{
+  width: 49.25%;
+}
+
 
 
 
