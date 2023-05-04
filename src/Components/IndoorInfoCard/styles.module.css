@@ -53,6 +53,10 @@
   width:69%; 
 }
 
+.infoTitle6{
+  width: 59%;
+}
+
 .infoTitle div{
  padding-bottom:1.4%;
  font-size: 0.9rem;
@@ -64,11 +68,20 @@
   padding-bottom:9%;
  }
 
+ .infoTitle4 div{
+  font-size: 0.7rem;
+ }
+
 .infoTitle span{
   font-size: 2.4vh;
   font-weight: 400;
   text-transform: lowercase;
  }
+
+ .infoTitle4 span{
+  font-size: 2vh;
+ }
+
 
 .infoValue{
   font-size: 5vh;
@@ -86,6 +99,11 @@
   padding-bottom: 0.5vh !important;
   font-size: 4vh !important;
   text-align: left;
+}
+
+.infoTitle4 .infoValue{
+  font-size: 3.4vh !important;
+  padding-bottom: 0vh !important;
 }
 
 

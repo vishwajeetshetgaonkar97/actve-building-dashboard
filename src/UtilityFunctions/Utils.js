@@ -549,6 +549,42 @@ const gettso2Value = partnerInfo => {
   return `-`;
 };
 
+const gettno2Value = partnerInfo => {
+  if (
+    partnerInfo &&
+    partnerInfo.data_logs &&
+    partnerInfo.data_logs[0] &&
+    partnerInfo.data_logs[0].no2 &&
+    partnerInfo.data_logs[0].no2.value
+  )
+    return `${partnerInfo.data_logs[0].no2.value} ug/m3`;
+  return `-`;
+};
+
+const getto3Value = partnerInfo => {
+  if (
+    partnerInfo &&
+    partnerInfo.data_logs &&
+    partnerInfo.data_logs[0] &&
+    partnerInfo.data_logs[0].o3 &&
+    partnerInfo.data_logs[0].o3.value
+  )
+    return `${partnerInfo.data_logs[0].o3.value} ug/m3`;
+  return `-`;
+};
+
+const gettcoValue = partnerInfo => {
+  if (
+    partnerInfo &&
+    partnerInfo.data_logs &&
+    partnerInfo.data_logs[0] &&
+    partnerInfo.data_logs[0].co &&
+    partnerInfo.data_logs[0].co.value
+  )
+    return `${partnerInfo.data_logs[0].o3.value} ug/m3`;
+  return `-`;
+};
+
 const getIndoorInfoName = (partnerInfo, index = 0) => {
   if (!partnerInfo || !partnerInfo.data_logs) return `-`;
 
@@ -569,8 +605,17 @@ const getIndoorInfoName = (partnerInfo, index = 0) => {
     case 'co2':
       return 'co2';
 
-      case 'so2':
-        return "so2"
+    case 'so2':
+      return 'so2';
+
+    case 'no2':
+      return 'no2';
+
+    case 'o3':
+      return 'o3';
+
+    case 'co':
+      return 'co';
 
     default:
       return '-';
@@ -596,9 +641,17 @@ const getIndoorInfoValue = (partnerInfo, index = 0) => {
     case 'co2':
       return gettco2Value(partnerInfo);
 
-      case 'so2':
+    case 'so2':
       return gettso2Value(partnerInfo);
-      
+
+    case 'no2':
+      return gettno2Value(partnerInfo);
+
+    case 'o3':
+      return getto3Value(partnerInfo);
+
+    case 'co':
+      return gettcoValue(partnerInfo);
 
     default:
       return '-';

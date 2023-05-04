@@ -23,6 +23,7 @@ const PmValueComponent = () => {
         ${parameterLength >= 2 && styles.column12}
         ${parameterLength >= 3 && styles.column13}
         ${parameterLength >= 4 && styles.column14}
+        ${parameterLength >= 6 && styles.column16}
         `}
       >
         <div
@@ -61,12 +62,14 @@ const PmValueComponent = () => {
         <div
           className={`${styles.column2} 
           ${parameterLength >= 4 && styles.column21}
-          
+          ${parameterLength >= 6 && styles.column24}
+          ${parameterLength >= 8 && styles.column28}
           `}
         >
           <div
             className={`${styles.childContainer2} ${parameterLength === 2 &&
-              styles.childContainer22}`}
+              styles.childContainer22} ${parameterLength === 8 &&
+                styles.childContainer28}`}
           >
             <IndoorInfoCard
               title={getIndoorInfoName(partnerData, 2)}
@@ -76,20 +79,22 @@ const PmValueComponent = () => {
               isLong={
                 parameterLength === 3 ||
                 parameterLength === 4 ||
-                parameterLength === 5
+                parameterLength === 5 ||
+                parameterLength === 6 ||
+                parameterLength === 7
               }
             />
           </div>
 
           {parameterLength >= 8 && (
             <div
-              className={`${styles.childContainer2} ${parameterLength === 2 &&
-                styles.childContainer22}`}
+              className={`${styles.childContainer2} ${parameterLength === 8 &&
+                styles.childContainer28}`}
             >
               <IndoorInfoCard
-                title={getIndoorInfoName(partnerData, 0)}
-                value={getIndoorInfoValue(partnerData, 0)}
-                condition={getIndoorInfoValueCondition(partnerData, 0)}
+                title={getIndoorInfoName(partnerData, 7)}
+                value={getIndoorInfoValue(partnerData, 7)}
+                condition={getIndoorInfoValueCondition(partnerData, 7)}
                 noOfCards={parameterLength}
               />
             </div>
@@ -101,6 +106,7 @@ const PmValueComponent = () => {
         <div
           className={`${styles.column3} 
           ${parameterLength >= 4 && styles.column32}
+          ${parameterLength >= 6 && styles.column34}
           `}
         >
           <div
@@ -127,6 +133,43 @@ const PmValueComponent = () => {
                 title={getIndoorInfoName(partnerData, 4)}
                 value={getIndoorInfoValue(partnerData, 4)}
                 condition={getIndoorInfoValueCondition(partnerData, 4)}
+                noOfCards={parameterLength}
+              />
+            </div>
+          )}
+        </div>
+      )}
+
+      {parameterLength >= 6 && (
+        <div
+          className={`${styles.column4} 
+          ${parameterLength >= 4 && styles.column32}
+          `}
+        >
+          <div
+            className={`${styles.childContainer4} 
+            ${parameterLength >= 7 && styles.childContainer42}
+            
+            `}
+          >
+            <IndoorInfoCard
+              title={getIndoorInfoName(partnerData, 5)}
+              value={getIndoorInfoValue(partnerData, 5)}
+              condition={getIndoorInfoValueCondition(partnerData, 5)}
+              noOfCards={parameterLength}
+              isLong={parameterLength === 6 }
+            />
+          </div>
+
+          {parameterLength >= 7 && (
+            <div
+              className={`${styles.childContainer3} ${parameterLength >= 7 &&
+                styles.childContainer42}`}
+            >
+              <IndoorInfoCard
+                title={getIndoorInfoName(partnerData, 6)}
+                value={getIndoorInfoValue(partnerData, 6)}
+                condition={getIndoorInfoValueCondition(partnerData, 6)}
                 noOfCards={parameterLength}
               />
             </div>
