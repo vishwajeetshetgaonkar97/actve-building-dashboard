@@ -32,6 +32,7 @@ const OutdoorInfoCard = ({
       <div
         className={`${styles.innerInfoCard}  
         ${isLong && styles.innerInfoCardLong}
+        ${noOfCards >= 2 && styles.innerInfoCard2}
         ${noOfCards >= 3 && styles.innerInfoCard3}
         ${noOfCards >= 4 && styles.innerInfoCard4}
         ${noOfCards >= 6 && styles.innerInfoCard6}
@@ -40,6 +41,8 @@ const OutdoorInfoCard = ({
         <div
           className={`${styles.infoImageContainer} 
           ${noOfCards >= 2 && styles.infoImageContainer2}
+          ${noOfCards >= 3 && styles.infoImageContainer3}
+          ${noOfCards >= 4 && styles.infoImageContainer4}
           ${noOfCards >= 6 && styles.infoImageContainer6}
           ${condition === 'bad' && styles.infoImageBadContainer} ${condition ===
             'moderate' && styles.infoImageModerateContainer} `}
@@ -71,13 +74,18 @@ const OutdoorInfoCard = ({
       <div
         className={`${styles.innerInfoCard}  
        ${isLong && styles.innerInfoCardLong}
+       ${noOfCards >= 2 && styles.innerInfoCard2}
        ${noOfCards >= 3 && styles.innerInfoCard3}
        ${noOfCards >= 4 && styles.innerInfoCard4}
+       ${noOfCards >= 6 && styles.innerInfoCard6}
        `}
       >
         <div
           className={`${styles.infoImageContainer} ${noOfCards >= 2 &&
             styles.infoImageContainer2} 
+
+            ${noOfCards >= 3 && styles.infoImageContainer3}
+            ${noOfCards >= 4 && styles.infoImageContainer4}
             ${noOfCards >= 6 && styles.infoImageContainer6}
             ${condition === 'bad' &&
             styles.infoImageBadContainer} ${condition === 'moderate' &&

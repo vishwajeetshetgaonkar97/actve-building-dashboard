@@ -20,6 +20,11 @@
   src: url('.//Assets//Fonts/AvenirLTStd-Medium.otf');
 }
 
+@font-face {
+  font-family: AvenirLT-Light;
+  src: url('.//Assets//Fonts/AvenirLTStd-Light.otf');
+}
+
 
 body {
   margin: 0;
