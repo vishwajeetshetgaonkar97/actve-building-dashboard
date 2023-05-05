@@ -32,11 +32,15 @@ const OutdoorInfoCard = ({
       <div
         className={`${styles.innerInfoCard}  
         ${isLong && styles.innerInfoCardLong}
-        ${noOfCards >= 3 && styles.innerInfoCard3}`}
+        ${noOfCards >= 3 && styles.innerInfoCard3}
+        ${noOfCards >= 4 && styles.innerInfoCard4}
+        ${noOfCards >= 6 && styles.innerInfoCard6}
+        `}
       >
         <div
           className={`${styles.infoImageContainer} 
           ${noOfCards >= 2 && styles.infoImageContainer2}
+          ${noOfCards >= 6 && styles.infoImageContainer6}
           ${condition === 'bad' && styles.infoImageBadContainer} ${condition ===
             'moderate' && styles.infoImageModerateContainer} `}
         >
@@ -52,6 +56,8 @@ const OutdoorInfoCard = ({
          
           ${noOfCards >= 2 && styles.infoTitle2}
           ${noOfCards >= 3 && styles.infoTitle3}
+          ${noOfCards >= 4 && styles.infoTitle4}
+          ${noOfCards >= 6 && styles.infoTitle6}
             `}
         >
           <div>indoor</div>
@@ -65,11 +71,15 @@ const OutdoorInfoCard = ({
       <div
         className={`${styles.innerInfoCard}  
        ${isLong && styles.innerInfoCardLong}
-       ${noOfCards >= 3 && styles.innerInfoCard3}`}
+       ${noOfCards >= 3 && styles.innerInfoCard3}
+       ${noOfCards >= 4 && styles.innerInfoCard4}
+       `}
       >
         <div
           className={`${styles.infoImageContainer} ${noOfCards >= 2 &&
-            styles.infoImageContainer2} ${condition === 'bad' &&
+            styles.infoImageContainer2} 
+            ${noOfCards >= 6 && styles.infoImageContainer6}
+            ${condition === 'bad' &&
             styles.infoImageBadContainer} ${condition === 'moderate' &&
             styles.infoImageModerateContainer} `}
         >
@@ -84,6 +94,8 @@ const OutdoorInfoCard = ({
           className={`${styles.infoTitle}
            ${noOfCards >= 2 && styles.infoTitle2}
            ${noOfCards >= 3 && styles.infoTitle3}
+           ${noOfCards >= 4 && styles.infoTitle4}
+           ${noOfCards >= 6 && styles.infoTitle6}
            `}
         >
           <div>outdoor</div>

@@ -4,7 +4,7 @@
   flex-direction: column;
   /* background-color: aqua; */
   background-color: #ffffff;
-  padding: 1% 1%;
+  padding:  0.45rem;
   border-radius: 1.5vh;
 } 
 
@@ -35,6 +35,10 @@
   margin-top: 0.5%;
 }
 
+.innerInfoCard4{
+  margin-top: 1.5%;
+}
+
 .innerInfoCardLong{
   height: 24% !important;
 }
@@ -56,6 +60,10 @@
 .infoImageContainer2{
   width: 3rem;
   padding-top: 1.2vh;
+}
+
+.infoImageContainer6{
+  height: 83%;
 }
 
 .infoImageBadContainer{
@@ -84,6 +92,15 @@
 
 .infoTitle2{
 width: 86%;
+}
+
+.infoTitle4{
+width: 80%;
+
+}
+
+.infoTitle6{
+width:74%
 }
 
 .infoTitle div{
