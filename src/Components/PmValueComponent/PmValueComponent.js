@@ -111,7 +111,7 @@ const PmValueComponent = () => {
         >
           <div
             className={`${styles.childContainer3} 
-            ${parameterLength >= 4 && styles.childContainer32}
+            ${parameterLength >= 5 && styles.childContainer32}
             
             `}
           >

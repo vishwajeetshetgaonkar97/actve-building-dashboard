@@ -669,13 +669,16 @@ const getOutdoorInfoValue = (partnerInfo, index = 0) => {
   if (!partnerInfo || !partnerInfo.data_logs) return `-`;
 
   const dataLog = partnerInfo.external_device_log;
+
+  if (!dataLog[getParametersExcludingTempHum(partnerInfo)[index]]) return '-';
+
+  
   console.log(
     'out',
     dataLog[getParametersExcludingTempHum(partnerInfo)[index]],
   );
 
-  if (!dataLog[getParametersExcludingTempHum(partnerInfo)[index]]) return '-';
-
+  
   return `${
     dataLog[getParametersExcludingTempHum(partnerInfo)[index]].value
   } ug/m3`;

@@ -9,6 +9,11 @@
   border-radius: 1.5vh;
 } 
 
+.infoCard2{
+padding: 1rem;
+}
+
+
 .infoImageContainer{
   background-color: #69C28F;
   padding: 0.6rem;
@@ -49,12 +54,16 @@
   width:78%; 
 }
 
+.infoTitle3{
+  width:79%; 
+}
+
 .infoTitle4{
   width:69%; 
 }
 
 .infoTitle6{
-  width: 59%;
+  width: 56%;
 }
 
 .infoTitle div{
@@ -64,12 +73,23 @@
  font-weight: 700;
 }
 
+.infoTitleLong div:first-child{
+  padding-bottom: 4% !important;
+}
+
 .infoTitle2 div{
   padding-bottom:9%;
+  font-size: 2vh;
  }
 
  .infoTitle4 div{
   font-size: 0.7rem;
+  padding-bottom: 24%;
+ }
+
+ .infoTitle6 div{
+  
+  padding-bottom: 42%;
  }
 
 .infoTitle span{
@@ -88,12 +108,12 @@
   color: #121212;
   padding-right: 2vw;
   padding-bottom: 2vh;
-  font-weight: 700;
+  font-weight: 800;
   text-transform: uppercase;
   width: 25%;
   text-align: right;
 }
-
+ 
 .infoValue2{
   padding-right: 0vw !important;
   padding-bottom: 0.5vh !important;
@@ -101,7 +121,7 @@
   text-align: left;
 }
 
-.infoTitle4 .infoValue{
+.infoTitle4 .infoValue,.infoTitle6 .infoValue{
   font-size: 3.4vh !important;
   padding-bottom: 0vh !important;
 }

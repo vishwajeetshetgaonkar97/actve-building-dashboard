@@ -28,7 +28,9 @@ const IndoorInfoCard = ({
   };
 
   return (
-    <div className={styles.infoCard}>
+    <div className={`${styles.infoCard} 
+    ${noOfCards >=2 && styles.infoCard2}
+    `}>
       <div
         className={`${styles.infoImageContainer} ${isLong &&
           styles.infoImage3} ${condition === 'bad' &&
@@ -39,9 +41,15 @@ const IndoorInfoCard = ({
       </div>
 
       <div
-        className={`${styles.infoTitle} ${noOfCards >= 2 &&
-          styles.infoTitle2} ${noOfCards >= 4 &&
-          styles.infoTitle4} ${noOfCards >= 6 && styles.infoTitle6}`}
+        className={`${styles.infoTitle}
+        ${isLong &&
+          styles.infoTitleLong}
+         ${noOfCards >= 2 && styles.infoTitle2} 
+         ${noOfCards >= 3 && styles.infoTitle3} 
+          
+          ${noOfCards >= 4 &&
+          styles.infoTitle4}
+           ${noOfCards >= 6 && styles.infoTitle6}`}
       >
         <div>{title}</div>
         {noOfCards >= 2 && (
