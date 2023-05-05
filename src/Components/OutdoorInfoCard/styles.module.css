@@ -3,7 +3,14 @@
   display: flex;
   flex-direction: column;
   /* background-color: aqua; */
+  background-color: #ffffff;
+  padding: 1% 1%;
+  border-radius: 1.5vh;
 } 
+
+.infoCardLong{
+  justify-content: flex-end;
+}
 
 .infoCardTitle{
   font-size:2vh;
@@ -16,33 +23,56 @@
 .innerInfoCard{
   background-color: #ffffff;
   padding: 1% 1%;
-  width: 98%;
+  padding-top: 1.5%;
+  padding-right: 1.5%;
+  width: 97.5%;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   border-radius: 1.5vh;
   box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.05);
-  height: 32%;
+  height: 42%;
   margin-top: 0.5%;
+}
+
+.innerInfoCardLong{
+  height: 24% !important;
+}
+
+.innerInfoCard{
+  height: 35%;
 }
 
 .infoImageContainer{
   background-color: #69C28F;
   padding: 0.5%;
   border-radius: 1vh;
-  height: 90%;
+  height: 92%;
   width: 4%;
   display: flex;
   justify-content: center;
-
 }
+
+.infoImageContainer2{
+  width: 3rem;
+  padding-top: 1.2vh;
+}
+
+.infoImageBadContainer{
+  background-color: #E96868;
+}
+
+.infoImageModerateContainer{
+  background-color: #F8D457;
+}
+
+
 .logoImage {
   height: 1.5rem;
 }
 
 .infoTitle{
   color: #212121;
-
   text-transform: uppercase;
   width:94%;
  height: 100%;
@@ -52,11 +82,19 @@
   /* background-color: antiquewhite; */
 }
 
+.infoTitle2{
+width: 86%;
+}
+
 .infoTitle div{
  font-size: 0.8rem;
  color: #121212;
  font-weight: 400;
 padding-top: 0.5rem;
+}
+
+.infoTitle3 div{
+  font-size: 1.6vh;
 }
 
 .infoTitle span{
@@ -74,6 +112,11 @@ padding-top: 0.5rem;
  width: 50%;
  }
 
+ .infoTitle3 span div{
+  font-size: 2.7vh;
+ 
+ }
+
 .infoValue{
   font-size: 1rem !important;
   color: #121212;
@@ -82,6 +125,11 @@ padding-top: 0.5rem;
   text-align: right;
   text-transform: lowercase;
 }
+
+.infoTitle3 .infoValue{
+  font-size: 1.8vh !important;
+ 
+ }
 
 .childContainer1{
   display: flex;

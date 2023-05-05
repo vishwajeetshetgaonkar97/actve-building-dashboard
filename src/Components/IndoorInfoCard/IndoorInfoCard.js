@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import GoodIcon from '../../Assets/GoodIcon.png';
 import ModerateIcon from '../../Assets/ModerateIcon.png';
 import BadIcon from '../../Assets/BadIcon.png';
-
 import styles from './styles.module.css';
 import PartnerDataContext from '../../Contexts/PartnerDataContext';
 import {
@@ -15,7 +14,7 @@ import {
 
 const IndoorInfoCard = ({
   title = '',
-  value = 0,
+  value = 0, 
   condition = '',
   noOfCards = 1,
   isLong = false,

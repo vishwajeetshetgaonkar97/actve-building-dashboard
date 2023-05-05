@@ -392,6 +392,13 @@ const getParametersExcludingTempHum = partnerInfo => {
       }
     }
 
+    if (partnerInfo.indoor_params.includes('aqi')) {
+      const index = parameterArray.indexOf('aqi');
+      if (index > -1) {
+        parameterArray.splice(index, 1);
+      }
+    }
+
     console.log('parameter array', parameterArray);
 
     return parameterArray;
@@ -658,12 +665,44 @@ const getIndoorInfoValue = (partnerInfo, index = 0) => {
   }
 };
 
+const getOutdoorInfoValue = (partnerInfo, index = 0) => {
+  if (!partnerInfo || !partnerInfo.data_logs) return `-`;
+
+  const dataLog = partnerInfo.external_device_log;
+  console.log(
+    'out',
+    dataLog[getParametersExcludingTempHum(partnerInfo)[index]],
+  );
+
+  if (!dataLog[getParametersExcludingTempHum(partnerInfo)[index]]) return '-';
+
+  return `${
+    dataLog[getParametersExcludingTempHum(partnerInfo)[index]].value
+  } ug/m3`;
+};
+
 const getIndoorInfoValueCondition = (partnerInfo, index = 0) => {
   if (!partnerInfo || !partnerInfo.data_logs) return `-`;
 
   const dataLog = partnerInfo.data_logs[0];
   console.log(
     'connnnn',
+    dataLog[getParametersExcludingTempHum(partnerInfo)[index]],
+  );
+
+  if (!dataLog[getParametersExcludingTempHum(partnerInfo)[index]]) return '-';
+
+  return getParameterText(
+    dataLog[getParametersExcludingTempHum(partnerInfo)[index]].incident_level,
+  );
+};
+
+const getOutdoorInfoValueCondition = (partnerInfo, index = 0) => {
+  if (!partnerInfo || !partnerInfo.data_logs) return `-`;
+
+  const dataLog = partnerInfo.external_device_log;
+  console.log(
+    'out connnnn',
     dataLog[getParametersExcludingTempHum(partnerInfo)[index]],
   );
 
@@ -712,4 +751,6 @@ export {
   getIndoorInfoName,
   getIndoorInfoValue,
   getIndoorInfoValueCondition,
+  getOutdoorInfoValue,
+  getOutdoorInfoValueCondition,
 };
