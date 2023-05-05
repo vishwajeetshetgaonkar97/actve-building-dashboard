@@ -89,7 +89,8 @@ const OutdoorPmValueComponent = () => {
                 parameterLength === 3 ||
                 parameterLength === 4 ||
                 parameterLength === 5 ||
-                parameterLength === 6
+                parameterLength === 6 ||
+                parameterLength === 7
               }
             />
           </div>
@@ -99,12 +100,21 @@ const OutdoorPmValueComponent = () => {
               className={`${styles.childContainer2} ${parameterLength === 8 &&
                 styles.childContainer28}`}
             >
-              <IndoorInfoCard
-                title={getIndoorInfoName(partnerData, 7)}
-                value={getIndoorInfoValue(partnerData, 7)}
-                condition={getIndoorInfoValueCondition(partnerData, 7)}
-                noOfCards={parameterLength}
-              />
+               <OutdoorInfoCard
+              title={getIndoorInfoName(partnerData, 7)}
+              value={getIndoorInfoValue(partnerData, 7)}
+              valueOut={getOutdoorInfoValue(partnerData, 7)}
+              condition={getIndoorInfoValueCondition(partnerData, 7)}
+              conditionOut={getOutdoorInfoValueCondition(partnerData, 7)}
+              noOfCards={parameterLength}
+              isLong={
+                parameterLength === 3 ||
+                parameterLength === 4 ||
+                parameterLength === 5 ||
+                parameterLength === 6 ||
+                parameterLength === 7
+              }
+            />
             </div>
           )}
         </div>
@@ -181,12 +191,15 @@ const OutdoorPmValueComponent = () => {
               className={`${styles.childContainer3} ${parameterLength >= 7 &&
                 styles.childContainer42}`}
             >
-              <IndoorInfoCard
-                title={getIndoorInfoName(partnerData, 6)}
-                value={getIndoorInfoValue(partnerData, 6)}
-                condition={getIndoorInfoValueCondition(partnerData, 6)}
-                noOfCards={parameterLength}
-              />
+             <OutdoorInfoCard
+              title={getIndoorInfoName(partnerData, 6)}
+              value={getIndoorInfoValue(partnerData, 6)}
+              valueOut={getOutdoorInfoValue(partnerData, 6)}
+              condition={getIndoorInfoValueCondition(partnerData, 6)}
+              conditionOut={getOutdoorInfoValueCondition(partnerData, 6)}
+              noOfCards={parameterLength}
+              isLong={parameterLength === 6}
+            />
             </div>
           )}
         </div>
