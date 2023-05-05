@@ -127,7 +127,7 @@ const RootComponent = ({ outdoorInfo = false }) => {
             value={deviceLatestPastLogDataContextValue}
           >
             <div className={styles.mainContainer}>
-              {getIfTemperatureHumidityVisible(partnerData) && (
+              {true && (
                 <TemperatureHumidityComponent outdoorInfo={outdoorInfo} />
               )}
               {outdoorInfo === 'true' ? (

@@ -408,6 +408,7 @@ const getParametersExcludingTempHum = partnerInfo => {
 };
 
 const getIfTemperatureHumidityVisible = partnerInfo => {
+
   if (
     partnerInfo &&
     partnerInfo.indoor_params &&
@@ -672,7 +673,7 @@ const getOutdoorInfoValue = (partnerInfo, index = 0) => {
 
   if (!dataLog[getParametersExcludingTempHum(partnerInfo)[index]]) return '-';
 
-  
+
   console.log(
     'out',
     dataLog[getParametersExcludingTempHum(partnerInfo)[index]],

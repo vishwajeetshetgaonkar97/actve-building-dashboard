@@ -17,7 +17,10 @@ const TemperatureHumidityComponent = ({ outdoorInfo }) => {
   const { partnerData } = useContext(PartnerDataContext);
 
   return (
-    <div className={styles.mainContainer}>
+    <div
+      className={styles.mainContainer}
+      style={{ opacity: getIfTemperatureHumidityVisible(partnerData) ? 1 : 0 }}
+    >
       <div
         className={`${styles.infoCard} ${(getIfTemperatureVisible(
           partnerData,
