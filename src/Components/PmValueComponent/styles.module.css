@@ -2,7 +2,8 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin: 1vh;
+  margin-top: 2.35vh;
+  margin-left: 0.4vw;
 }
 
 .column1,.column2,.column3,.column4{
