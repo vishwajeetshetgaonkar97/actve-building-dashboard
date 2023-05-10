@@ -1,6 +1,6 @@
 .mainContainer {
   display: flex;
-  padding-top: 0.5vh;
+  padding-top: 0.4vh;
   padding-bottom: 1vh;
   justify-content: space-between;
   text-transform: uppercase;
@@ -12,101 +12,45 @@
 }
 
 .logoImage1 {
-  height: 4vh;
+  height: 4.6vh;
 }
 
 .logoImage2 {
-  margin-left: 1.5vw;
-  height: 2.5vh;
-  font-size: 2.8vh;
-  /* font-family: poppin-Medium; */
+  margin-left: 2vw;
+  font-size: 3.6vh;
   color: #ffffff;
   text-transform: uppercase;
+   /* font-family: AvenirLT-Light; */
+  font-weight: AvenirLT-Medium; 
   
-  font-weight: 800;
 }
 
 .imageSeperatorBorder {
-  border: 1.5px solid #ffffff;
+  border: 2px solid #ffffff;
   background-color: #ffffff;
-  height: 3.8vh;
-  margin-left: 1vw;
+  height: 4vh;
+  margin-left: 2vw;
 }
 
 .infoContainer {
   display: flex;
   align-items: center;
-  font-size: 2vh;
+  font-size: 2.5vh;
   color: rgb(255, 255, 255);
   padding-left: 1vw;
   background: rgba(47, 109, 100, 0.8);
   box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.05);
   border-radius: 1.5vh;
-  width: 58vw;
-  height: 6vh;
+  width: 44vw;
+  height: 8vh;
+  /* font-family: AvenirLT-Light; */
 }
 
 .infoContainer span{
-  padding: 0vw 0.8vw;
+  padding: 0vw 1vw;
 }
 
 .infoContainer span:first-child{
   border-right: 1.5px solid white;
 }
 
-
-@media screen and (max-width: 800px) {
-
-  .mainContainer {
-    border-bottom: 0px solid rgba(247, 245, 223, 0.6);
-   flex-direction: column;
-    padding-top: 0.5vh;
-    padding-bottom: 1vh;
-    justify-content: space-between;
-  }
-  
-  .logoContainer {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logoImage1 {
-    height: 6vh;
-  }
-  
-  .logoImage2 {
-    margin-left: 5vw;
-    height: 2.4vh;
-    font-size: 3vh;
-    margin-top: -2.2vh;
-  }
-  
-  .imageSeperatorBorder {
-    border: 1.5px solid #F7F5E0;
-    border-radius: 2px;
-    background-color: #F7F5E0;
-    height: 4vh;
-    margin-left: 1vw;
-  }
-  
-  .infoContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 2vh;
-    color: rgba(247, 245, 223, 0.6);
-    padding-left: 10vw;
-    padding-top: 1vh;
-    display: none;
-  }
-  
-  .infoInnerContainer {
-    width: 98vw;
-    
-  }
-  .infoInnerContainer div{
-    padding-top: 0.8vh;
-  }
-
-
-}

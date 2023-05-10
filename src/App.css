@@ -1,5 +1,6 @@
 .wrapper {
-  padding: 5vh 3.5vw;
+  padding: 4vh 3vw;
+  padding-right: 4vw;
   background: linear-gradient(180deg, #31B099 0%, #69C28F 100%);
   min-height: 90vh;
 }

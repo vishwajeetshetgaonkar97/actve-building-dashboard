@@ -16,13 +16,18 @@
 }
 
 @font-face {
-  font-family: AvenirLT-Medium;
-  src: url('.//Assets//Fonts/AvenirLTStd-Medium.otf');
+  font-family: AvenirLT-Black;
+  src: url('.//Assets//Fonts/AvenirLTStd-Black.otf');
 }
 
 @font-face {
   font-family: AvenirLT-Light;
   src: url('.//Assets//Fonts/AvenirLTStd-Light.otf');
+}
+
+@font-face {
+  font-family: AvenirLT-Medium;
+  src: url('.//Assets//Fonts/AvenirLTStd-Medium.otf');
 }
 
 
@@ -37,7 +42,8 @@ body {
   /* background-color: #212529 !important; */
   background-color: #000b1f;
   color: aliceblue;
-  font-family: AvenirLT-Medium;
+  font-family: AvenirLT-Black;
+  opacity: 0.8;
 }
 
 .MuiList-root{

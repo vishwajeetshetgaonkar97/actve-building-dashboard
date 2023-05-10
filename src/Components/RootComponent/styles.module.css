@@ -1,14 +1,9 @@
 .mainContainer {
   display: flex;
-  padding: 8vh 10vw;
+  padding: 8vh 3.4vw;
+  padding-right: 3.6vw;
+  padding-top: 17.5vh;
   padding-bottom: 2vh;
   flex-direction: column;
 }
 
-@media screen and (max-width: 800px) {
-  .mainContainer {
-  flex-direction: column;
-    margin-top: 2vh;
-    
-  }
-}
