@@ -3,6 +3,7 @@
   display: flex;
   justify-content: space-between;
   margin: 1vh;
+  margin-top: 1.5vh;
 }
 
 .infoCard{
@@ -16,27 +17,25 @@
 } 
 
 .infoCard2{
-  width: 44.4%;
+  width: 44.5%;
 } 
 
 .logoImage {
-  height: 3.5vh;
+  height: 3.4vh;
   background-color: #69C28F;
-  padding: 1.5vh;
-  border-radius: 1vh;
+  padding: 0.8vh 0.65vw;
+  border-radius: 0.5vh;
 }
 
 .infoTitle{
   color: #212121;
-  font-size: 2.2vh;
+  font-size: 2.6vh;
   text-transform: uppercase;
-  width:82%;
-  font-weight: 600;
-  padding-top: 0.9vh;
+  width:6%;
 }
 
 .infoCard2 .infoTitle{
-  width:57%;
+  width:48%;
 }
 .infoOutdoorCard .infoTitle{
   width:40%;
@@ -45,12 +44,11 @@
 
 
 .infoValue{
-  font-size: 4.2vh;
+  font-size: 5.5vh;
   color: black;
-  padding-top: 0.5vh;
+  padding-top: 0vh;
   padding-right: 2vw;
-  font-weight: 800;
-  width:24%;
+  width:35%;
   text-align: right;
 }
 

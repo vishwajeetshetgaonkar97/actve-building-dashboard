@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import TemperatureIcon from '../../Assets/TemperatureIcon.png';
+import HumidityIcon from '../../Assets/HumidityIcon.png';
 import styles from './styles.module.css';
 import {
   getHumidity,
@@ -30,7 +31,7 @@ const TemperatureHumidityComponent = ({ outdoorInfo }) => {
           partnerData,
         ) && styles.infoOutdoorCard} `}
       >
-        <img className={styles.logoImage} src={TemperatureIcon} alt="logo" />
+        <img className={styles.logoImage} src={HumidityIcon} alt="logo" />
         <div className={styles.infoTitle}>temperature</div>
 
         <div
