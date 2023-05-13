@@ -146,6 +146,8 @@ const PmValueComponent = () => {
         <div
           className={`${styles.column4} 
           ${parameterLength >= 4 && styles.column32}
+          ${parameterLength >= 7 && styles.column42}
+          
           `}
         >
           <div
@@ -165,7 +167,7 @@ const PmValueComponent = () => {
 
           {parameterLength >= 7 && (
             <div
-              className={`${styles.childContainer3} ${parameterLength >= 7 &&
+              className={`${styles.childContainer4} ${parameterLength >= 7 &&
                 styles.childContainer42}`}
             >
               <IndoorInfoCard
