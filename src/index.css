@@ -17,7 +17,7 @@
 
 @font-face {
   font-family: AvenirLT-Black;
-  src: url('.//Assets//Fonts/AvenirLTStd-Black.otf');
+  src: url('.//Assets//Fonts/AvenirLTStd-Heavy.otf');
 }
 
 @font-face {
@@ -44,6 +44,10 @@ body {
   color: aliceblue;
   font-family: AvenirLT-Black;
   opacity: 0.8;
+
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll; 
+  
 }
 
 .MuiList-root{

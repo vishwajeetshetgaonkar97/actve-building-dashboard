@@ -17,7 +17,7 @@
 
 .logoImage2 {
   margin-left: 2vw;
-  font-size: 3.6vh;
+  font-size: 3.7vh;
   color: #ffffff;
   text-transform: uppercase;
    /* font-family: AvenirLT-Light; */
@@ -35,7 +35,7 @@
 .infoContainer {
   display: flex;
   align-items: center;
-  font-size: 2.5vh;
+  font-size: 2.6vh;
   color: rgb(255, 255, 255);
   padding-left: 1vw;
   background: rgba(47, 109, 100, 0.8);
