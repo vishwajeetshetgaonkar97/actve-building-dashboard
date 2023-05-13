@@ -52,18 +52,16 @@ const IndoorInfoCard = ({
            ${noOfCards >= 6 && styles.infoTitle6}`}
       >
         <div>{title}</div>
-        {noOfCards >= 2 && (
+        
           <div
             className={`${styles.infoValue} ${noOfCards >= 2 &&
               styles.infoValue2}`}
           >
             {condition}
           </div>
-        )}
+        
         <span>{value}</span>
       </div>
-
-      {noOfCards < 2 && <div className={styles.infoValue}>{condition}</div>}
     </div>
   );
 };
