@@ -24,7 +24,7 @@ justify-content: space-between;
 }
 
 .column14{
-  width: 32.5%;
+  width: 32%;
 }
 
 .column16{
@@ -52,7 +52,7 @@ justify-content: space-between;
 }
 
 .column21{
-  width: 32.5%;
+  width: 32%;
 }
 
 .column24{
@@ -69,7 +69,8 @@ justify-content: space-between;
 }
 
 .column3{
-  width: 32.5%;
+  width: 32%;
+  height: 35.6vh;
 }
 
 .column34{

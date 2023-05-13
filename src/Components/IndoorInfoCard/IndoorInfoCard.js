@@ -48,6 +48,7 @@ const IndoorInfoCard = ({
       <div
         className={`${styles.infoTitle}
         ${isLong && styles.infoTitleLong}
+        ${isLong && noOfCards >= 4 && styles.infoTitleLong4} 
          ${noOfCards >= 2 && styles.infoTitle2} 
          ${noOfCards >= 3 && styles.infoTitle3} 
           

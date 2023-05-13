@@ -73,7 +73,7 @@ padding: 3vh;
 }
 
 .infoTitle4{
-  width:69%; 
+  width:76%; 
 }
 
 .infoTitle6{
@@ -91,6 +91,10 @@ padding: 3vh;
   padding-bottom: 1.4% !important;
 }
 
+.infoTitleLong4 div:first-child{
+  padding-bottom: 5% !important;
+}
+
 .infoTitle2 div{
   padding-bottom:2.4%;
   font-size: 2.6vh;
@@ -104,8 +108,8 @@ padding: 3vh;
 
 
  .infoTitle4 div{
-  font-size: 0.8rem;
-  padding-bottom: 24%;
+  font-size: 1.6vh;
+  padding-bottom:6%;
  }
 
  .infoTitle6 div{
@@ -124,7 +128,7 @@ padding: 3vh;
  }
 
  .infoTitle4 span{
-  font-size: 2vh;
+  font-size: 1.8vh;
  }
 
 
