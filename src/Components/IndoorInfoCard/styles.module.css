@@ -29,8 +29,13 @@ padding: 3vh;
   width: 4.5vw;
 }
 
+.infoImageContainer3{
+  width: 3.5vw;
+}
+
+/* long  */
 .infoImage3{
-  height: 92.5%;
+  height: 98.5%;
 }
 
 .infoImageBadContainer{
@@ -46,6 +51,10 @@ padding: 3vh;
   margin-top: 12%;
 }
 
+.infoImageContainer3 .logoImage{
+  height: 4.6vh;
+}
+
 .infoTitle{
   color: #212121;
   text-transform: uppercase;
@@ -59,7 +68,8 @@ padding: 3vh;
 }
 
 .infoTitle3{
-  width:79%; 
+  width:86%; 
+  padding-bottom: 0vh;
 }
 
 .infoTitle4{
@@ -78,13 +88,20 @@ padding: 3vh;
 }
 
 .infoTitleLong div:first-child{
-  padding-bottom: 4% !important;
+  padding-bottom: 1.4% !important;
 }
 
 .infoTitle2 div{
   padding-bottom:2.4%;
   font-size: 2.6vh;
  }
+
+ .infoTitle3 div{
+  padding-top: 2%;
+  padding-bottom:0.4%;
+  font-size: 1.8vh;
+ }
+
 
  .infoTitle4 div{
   font-size: 0.8rem;
@@ -99,6 +116,11 @@ padding: 3vh;
 .infoTitle span{
   font-size: 2.4vh;
   text-transform: lowercase;
+ }
+
+ .infoTitle3 span{
+  font-size: 1.8vh;
+
  }
 
  .infoTitle4 span{
@@ -119,6 +141,10 @@ padding: 3vh;
   padding-right: 0vw !important;
   font-size: 5vh !important;
   text-align: left;
+}
+
+.infoTitle3 .infoValue {
+  font-size: 3.7vh !important;
 }
 
 .infoTitle4 .infoValue,.infoTitle6 .infoValue{

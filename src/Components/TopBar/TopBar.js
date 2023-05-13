@@ -2,12 +2,16 @@ import React, { useContext } from 'react';
 import ActiveBuildingLogoImage from '../../Assets/ActiveBuildingsLogo.png';
 import styles from './styles.module.css';
 import PartnerDataContext from '../../Contexts/PartnerDataContext';
+import { getParametersExcludingTempHum } from '../../UtilityFunctions/Utils';
 
 const TopBar = () => {
   const { partnerData } = useContext(PartnerDataContext);
 
+  const parameterLength = getParametersExcludingTempHum(partnerData).length;
+
+
   return (
-    <div className={styles.mainContainer}>
+    <div className={`${styles.mainContainer} `}>
       <div className={styles.logoContainer}>
         <img
           className={styles.logoImage1}

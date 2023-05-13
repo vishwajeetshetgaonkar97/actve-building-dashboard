@@ -6,6 +6,7 @@
   margin-left: 0.4vw;
 }
 
+
 .column1,.column2,.column3,.column4{
   display: flex;
   width: 100%;
@@ -19,7 +20,7 @@ justify-content: space-between;
   width: 49.25%;
   flex-direction: column;
   justify-content: space-between;
-  height: 50vh;
+  height: 35.6vh;
 }
 
 .column14{
@@ -41,12 +42,13 @@ justify-content: space-between;
 }
 
 .childContainer13{
-  height: 24vh;
+  height: 16vh;
+  
 }
 
 .column2{
-  width: 49.25%;
-  height: 50vh;
+  width: 48.25%;
+  height: 40vh;
 }
 
 .column21{
@@ -63,7 +65,7 @@ justify-content: space-between;
 }
 
 .childContainer2{
-  height: 50vh;
+  height: 35.6vh;
 }
 
 .column3{

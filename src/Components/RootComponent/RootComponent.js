@@ -12,6 +12,7 @@ import {
   getDefaultLon,
   getIfOutdoorTemperatureHumidityVisible,
   getIfTemperatureHumidityVisible,
+  getParametersExcludingTempHum,
 } from '../../UtilityFunctions/Utils';
 import AreaSelection from '../AreaSelection/AreaSelection';
 import InfoDisplay from '../InfoDisplay/InfoDisplay';
@@ -115,6 +116,9 @@ const RootComponent = ({ outdoorInfo = false }) => {
 
   console.log('out', outdoorInfo);
 
+  const parameterLength = getParametersExcludingTempHum(partnerData).length;
+
+
   return (
     <BuildingDataContext.Provider value={BuildingDataContextValue}>
       <BuildingDeviceListDataContext.Provider
@@ -126,7 +130,8 @@ const RootComponent = ({ outdoorInfo = false }) => {
           <DeviceLatestPastLogDataContext.Provider
             value={deviceLatestPastLogDataContextValue}
           >
-            <div className={styles.mainContainer}>
+            <div className={`${styles.mainContainer} 
+            ${parameterLength >= 3 &&  styles.mainContainer3}`}>
               {true && (
                 <TemperatureHumidityComponent outdoorInfo={outdoorInfo} />
               )}

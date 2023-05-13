@@ -36,6 +36,7 @@ const IndoorInfoCard = ({
       <div
         className={`${styles.infoImageContainer}
         ${noOfCards >= 2 && styles.infoImageContainer2}
+        ${noOfCards >= 3 && styles.infoImageContainer3}
         ${isLong &&
           styles.infoImage3} ${condition === 'bad' &&
           styles.infoImageBadContainer} ${condition === 'moderate' &&

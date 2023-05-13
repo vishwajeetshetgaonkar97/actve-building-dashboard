@@ -10,6 +10,7 @@ import {
   getIfTemperatureVisible,
   getOutdoorHumidity,
   getOutdoorTemperature,
+  getParametersExcludingTempHum,
   getTemperature,
 } from '../../UtilityFunctions/Utils';
 import PartnerDataContext from '../../Contexts/PartnerDataContext';
@@ -17,17 +18,23 @@ import PartnerDataContext from '../../Contexts/PartnerDataContext';
 const TemperatureHumidityComponent = ({ outdoorInfo }) => {
   const { partnerData } = useContext(PartnerDataContext);
 
+  const parameterLength = getParametersExcludingTempHum(partnerData).length;
+
   return (
     <div
-      className={styles.mainContainer}
+      className={`${styles.mainContainer}`}
       style={{ opacity: getIfTemperatureHumidityVisible(partnerData) ? 1 : 0 }}
     >
       <div
-        className={`${styles.infoCard} ${(getIfTemperatureVisible(
+        className={`${styles.infoCard} 
+        ${parameterLength >= 3 && styles.infoCard3}
+         ${(getIfTemperatureVisible(
           partnerData,
         ) ||
           getIfHumidityVisible(partnerData)) &&
-          styles.infoCard2}   ${getIfOutdoorTemperatureHumidityVisible(
+          styles.infoCard2}  
+          
+          ${getIfOutdoorTemperatureHumidityVisible(
           partnerData,
         ) && styles.infoOutdoorCard} `}
       >
@@ -57,7 +64,8 @@ const TemperatureHumidityComponent = ({ outdoorInfo }) => {
 
       {getIfTemperatureHumidityVisible(partnerData) && (
         <div
-          className={`${styles.infoCard} ${(getIfTemperatureVisible(
+          className={`${styles.infoCard} ${parameterLength >= 3 && styles.infoCard3}
+          ${(getIfTemperatureVisible(
             partnerData,
           ) ||
             getIfHumidityVisible(partnerData)) &&
