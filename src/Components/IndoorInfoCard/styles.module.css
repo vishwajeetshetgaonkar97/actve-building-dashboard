@@ -10,7 +10,7 @@
 } 
 
 .infoCard2{
-padding: 1rem;
+padding: 3vh;
 }
 
 
@@ -23,6 +23,10 @@ padding: 1rem;
   display: flex;
   justify-content: center;
 
+}
+
+.infoImageContainer2{
+  width: 4.5vw;
 }
 
 .infoImage3{
@@ -50,7 +54,8 @@ padding: 1rem;
 }
 
 .infoTitle2{
-  width:78%; 
+  width:81%; 
+  padding-bottom: 0.5vh;
 }
 
 .infoTitle3{
@@ -77,8 +82,8 @@ padding: 1rem;
 }
 
 .infoTitle2 div{
-  padding-bottom:9%;
-  font-size: 2.2vh;
+  padding-bottom:2.4%;
+  font-size: 2.6vh;
  }
 
  .infoTitle4 div{
@@ -112,8 +117,7 @@ padding: 1rem;
  
 .infoValue2{
   padding-right: 0vw !important;
-  padding-bottom: 0.5vh !important;
-  font-size: 4vh !important;
+  font-size: 5vh !important;
   text-align: left;
 }
 

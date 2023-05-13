@@ -14,7 +14,7 @@ import {
 
 const IndoorInfoCard = ({
   title = '',
-  value = 0, 
+  value = 0,
   condition = '',
   noOfCards = 1,
   isLong = false,
@@ -28,11 +28,15 @@ const IndoorInfoCard = ({
   };
 
   return (
-    <div className={`${styles.infoCard} 
-    ${noOfCards >=2 && styles.infoCard2}
-    `}>
+    <div
+      className={`${styles.infoCard} 
+    ${noOfCards >= 2 && styles.infoCard2}
+    `}
+    >
       <div
-        className={`${styles.infoImageContainer} ${isLong &&
+        className={`${styles.infoImageContainer}
+        ${noOfCards >= 2 && styles.infoImageContainer2}
+        ${isLong &&
           styles.infoImage3} ${condition === 'bad' &&
           styles.infoImageBadContainer} ${condition === 'moderate' &&
           styles.infoImageModerateContainer} `}
@@ -42,24 +46,22 @@ const IndoorInfoCard = ({
 
       <div
         className={`${styles.infoTitle}
-        ${isLong &&
-          styles.infoTitleLong}
+        ${isLong && styles.infoTitleLong}
          ${noOfCards >= 2 && styles.infoTitle2} 
          ${noOfCards >= 3 && styles.infoTitle3} 
           
-          ${noOfCards >= 4 &&
-          styles.infoTitle4}
+          ${noOfCards >= 4 && styles.infoTitle4}
            ${noOfCards >= 6 && styles.infoTitle6}`}
       >
         <div>{title}</div>
-        
-          <div
-            className={`${styles.infoValue} ${noOfCards >= 2 &&
-              styles.infoValue2}`}
-          >
-            {condition}
-          </div>
-        
+
+        <div
+          className={`${styles.infoValue} ${noOfCards >= 2 &&
+            styles.infoValue2}`}
+        >
+          {condition}
+        </div>
+
         <span>{value}</span>
       </div>
     </div>
