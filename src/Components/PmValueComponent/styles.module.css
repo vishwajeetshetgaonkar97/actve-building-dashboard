@@ -28,7 +28,7 @@ justify-content: space-between;
 }
 
 .column16{
-  width: 24%;
+  width: 23%;
 }
 
 .childContainer1,.childContainer2,.childContainer3,.childContainer4{
@@ -56,7 +56,7 @@ justify-content: space-between;
 }
 
 .column24{
-  width: 24%;
+  width: 23%;
 }
 
 .column28{
@@ -74,7 +74,7 @@ justify-content: space-between;
 }
 
 .column34{
-  width: 24%;
+  width: 23%;
 }
 
 .column32{
@@ -91,15 +91,15 @@ justify-content: space-between;
 }
 
 .column4{
-  width: 24%;
+  width: 23%;
 }
 
 .childContainer4{
-  height: 50vh;
+  height: 35.6vh;
 }
 
 .childContainer42,.childContainer28{
-  height: 24vh;
+  height: 16vh;
 }
 
 

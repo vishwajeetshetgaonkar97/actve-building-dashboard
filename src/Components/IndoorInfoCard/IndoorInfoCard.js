@@ -31,12 +31,14 @@ const IndoorInfoCard = ({
     <div
       className={`${styles.infoCard} 
     ${noOfCards >= 2 && styles.infoCard2}
+    ${noOfCards >= 6 && styles.infoCard6}
     `}
     >
       <div
         className={`${styles.infoImageContainer}
         ${noOfCards >= 2 && styles.infoImageContainer2}
         ${noOfCards >= 3 && styles.infoImageContainer3}
+        ${noOfCards >= 6 && styles.infoImageContainer6}
         ${isLong &&
           styles.infoImage3} ${condition === 'bad' &&
           styles.infoImageBadContainer} ${condition === 'moderate' &&
@@ -49,6 +51,7 @@ const IndoorInfoCard = ({
         className={`${styles.infoTitle}
         ${isLong && styles.infoTitleLong}
         ${isLong && noOfCards >= 4 && styles.infoTitleLong4} 
+        ${isLong && noOfCards >= 6 && styles.infoTitleLong6} 
          ${noOfCards >= 2 && styles.infoTitle2} 
          ${noOfCards >= 3 && styles.infoTitle3} 
           
