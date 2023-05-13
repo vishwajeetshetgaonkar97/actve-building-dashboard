@@ -62,6 +62,7 @@ justify-content: space-between;
 .column28{
   flex-direction: column;
   justify-content: space-between;
+  height: 35.6vh;
 }
 
 .childContainer2{
