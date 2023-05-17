@@ -134,8 +134,8 @@ padding-bottom: 1.2vh;
  }
 
  .infoTitle6 div{
-  font-size: 1.6vh;
-  padding-bottom: 10%;
+  font-size: 2vh;
+  padding-bottom: 9%;
  }
 
 .infoTitle span{
@@ -174,7 +174,7 @@ padding-bottom: 1.2vh;
 }
 
 .infoTitle4 .infoValue,.infoTitle6 .infoValue{
-  font-size: 3.4vh !important;
+  font-size: 3.6vh !important;
   padding-bottom: 0vh !important;
 }
 
