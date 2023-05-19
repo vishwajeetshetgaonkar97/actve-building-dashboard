@@ -33,7 +33,9 @@ const TopBar = () => {
             ? partnerData.display_name
             : ''}{' '}
         </span>{' '}
-        <span>MAIN OT</span>
+        <span>{(partnerData && partnerData.data_logs && partnerData.data_logs[0] && partnerData.data_logs[0].location)
+            ? partnerData.data_logs[0].location
+            : ''}{' '}</span>
       </div>
     </div>
   );
