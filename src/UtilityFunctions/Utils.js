@@ -529,7 +529,7 @@ const gettvocValue = partnerInfo => {
     partnerInfo.data_logs[0].tvoc &&
     partnerInfo.data_logs[0].tvoc.value
   )
-    return `${partnerInfo.data_logs[0].tvoc.value} ug/m3`;
+    return `${partnerInfo.data_logs[0].tvoc.value} ppb`;
   return `-`;
 };
 
@@ -541,7 +541,7 @@ const gettco2Value = partnerInfo => {
     partnerInfo.data_logs[0].co2 &&
     partnerInfo.data_logs[0].co2.value
   )
-    return `${partnerInfo.data_logs[0].co2.value} ug/m3`;
+    return `${partnerInfo.data_logs[0].co2.value} ppm`;
   return `-`;
 };
 
@@ -553,7 +553,7 @@ const gettso2Value = partnerInfo => {
     partnerInfo.data_logs[0].so2 &&
     partnerInfo.data_logs[0].so2.value
   )
-    return `${partnerInfo.data_logs[0].so2.value} ug/m3`;
+    return `${partnerInfo.data_logs[0].so2.value} ppb`;
   return `-`;
 };
 
@@ -565,7 +565,7 @@ const gettno2Value = partnerInfo => {
     partnerInfo.data_logs[0].no2 &&
     partnerInfo.data_logs[0].no2.value
   )
-    return `${partnerInfo.data_logs[0].no2.value} ug/m3`;
+    return `${partnerInfo.data_logs[0].no2.value} ppb`;
   return `-`;
 };
 
@@ -577,7 +577,7 @@ const getto3Value = partnerInfo => {
     partnerInfo.data_logs[0].o3 &&
     partnerInfo.data_logs[0].o3.value
   )
-    return `${partnerInfo.data_logs[0].o3.value} ug/m3`;
+    return `${partnerInfo.data_logs[0].o3.value} ppb`;
   return `-`;
 };
 
@@ -589,7 +589,19 @@ const gettcoValue = partnerInfo => {
     partnerInfo.data_logs[0].co &&
     partnerInfo.data_logs[0].co.value
   )
-    return `${partnerInfo.data_logs[0].o3.value} ug/m3`;
+    return `${partnerInfo.data_logs[0].co.value} ppb`;
+  return `-`;
+};
+
+const gettch2oValue = partnerInfo => {
+  if (
+    partnerInfo &&
+    partnerInfo.data_logs &&
+    partnerInfo.data_logs[0] &&
+    partnerInfo.data_logs[0].ch2o &&
+    partnerInfo.data_logs[0].ch2o.value
+  )
+    return `${partnerInfo.data_logs[0].ch2o.value} ppb`;
   return `-`;
 };
 
@@ -624,6 +636,9 @@ const getIndoorInfoName = (partnerInfo, index = 0) => {
 
     case 'co':
       return 'co';
+
+      case 'ch2o':
+      return 'ch2o';
 
     default:
       return '-';
@@ -660,6 +675,10 @@ const getIndoorInfoValue = (partnerInfo, index = 0) => {
 
     case 'co':
       return gettcoValue(partnerInfo);
+
+      case 'ch2o':
+      return gettch2oValue(partnerInfo);
+      
 
     default:
       return '-';
