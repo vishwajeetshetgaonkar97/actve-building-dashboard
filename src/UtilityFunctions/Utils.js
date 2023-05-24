@@ -605,6 +605,43 @@ const gettch2oValue = partnerInfo => {
   return `-`;
 };
 
+const getSoundValue = partnerInfo => {
+  if (
+    partnerInfo &&
+    partnerInfo.data_logs &&
+    partnerInfo.data_logs[0] &&
+    partnerInfo.data_logs[0].sound &&
+    partnerInfo.data_logs[0].sound.value
+  )
+    return `${partnerInfo.data_logs[0].sound.value} dBA`;
+  return `-`;
+};
+
+const getLightValue = partnerInfo => {
+  if (
+    partnerInfo &&
+    partnerInfo.data_logs &&
+    partnerInfo.data_logs[0] &&
+    partnerInfo.data_logs[0].light &&
+    partnerInfo.data_logs[0].light.value
+  )
+    return `${partnerInfo.data_logs[0].light.value} Lux`;
+  return `-`;
+};
+
+const getPm1Value = partnerInfo => {
+  if (
+    partnerInfo &&
+    partnerInfo.data_logs &&
+    partnerInfo.data_logs[0] &&
+    partnerInfo.data_logs[0].pm1 &&
+    partnerInfo.data_logs[0].pm1.value
+  )
+    return `${partnerInfo.data_logs[0].pm1.value} ug/m3`;
+  return `-`;
+};
+
+
 const getIndoorInfoName = (partnerInfo, index = 0) => {
   if (!partnerInfo || !partnerInfo.data_logs) return `-`;
 
@@ -639,6 +676,15 @@ const getIndoorInfoName = (partnerInfo, index = 0) => {
 
       case 'ch2o':
       return 'ch2o';
+
+      case 'sound':
+        return 'Sound';
+
+        case 'light':
+        return 'Light';
+
+        case 'pm1':
+        return 'PM1';
 
     default:
       return '-';
@@ -678,6 +724,16 @@ const getIndoorInfoValue = (partnerInfo, index = 0) => {
 
       case 'ch2o':
       return gettch2oValue(partnerInfo);
+
+      case 'sound':
+        return getSoundValue(partnerInfo);
+
+        case 'light':
+        return getLightValue(partnerInfo);
+
+        case 'pm1':
+        return getPm1Value(partnerInfo);
+
       
 
     default:
