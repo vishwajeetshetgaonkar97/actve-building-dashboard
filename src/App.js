@@ -10,11 +10,12 @@ import TableComponent from './Components/RootComponent/TableComponent/TableCompo
 import getPartnerInfo from './api/getPartnerInfo';
 
 function App() {
+  const ref = useRef({ intervalId: null });
   const [partnerData, setPartnerData] = useState(null);
 
   const urlSearchParams = new URLSearchParams(window.location.search);
   const params = Object.fromEntries(urlSearchParams.entries());
-  const { unique_id = '',outdoorInfo=false } = params;
+  const { unique_id = '', outdoorInfo = false } = params;
 
   const getPartnerParameters = async () => {
     try {
@@ -36,6 +37,15 @@ function App() {
     getPartnerParameters();
   }, []);
 
+  useEffect(() => {
+    ref.current.intervalId = setInterval(() => {
+      getPartnerParameters();
+    }, 120000);
+    return () => {
+      clearInterval(ref.current.intervalId);
+    };
+  }, []);
+
   if (!partnerData)
     return (
       <div className="spinnerContainer wrapper">
@@ -47,8 +57,8 @@ function App() {
     <PartnerDataContext.Provider value={PartnerDataContextValue}>
       <>
         <div className="wrapper">
-          <TopBar/>
-          <RootComponent outdoorInfo={outdoorInfo}/>
+          <TopBar />
+          <RootComponent outdoorInfo={outdoorInfo} />
         </div>
 
         {/* <TableComponent /> */}
