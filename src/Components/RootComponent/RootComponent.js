@@ -118,7 +118,6 @@ const RootComponent = ({ outdoorInfo = false }) => {
 
   const parameterLength = getParametersExcludingTempHum(partnerData).length;
 
-
   return (
     <BuildingDataContext.Provider value={BuildingDataContextValue}>
       <BuildingDeviceListDataContext.Provider
@@ -130,8 +129,12 @@ const RootComponent = ({ outdoorInfo = false }) => {
           <DeviceLatestPastLogDataContext.Provider
             value={deviceLatestPastLogDataContextValue}
           >
-            <div className={`${styles.mainContainer} 
-            ${parameterLength >= 3 &&  styles.mainContainer3}`}>
+            <div
+              className={`${styles.mainContainer} 
+            ${parameterLength >= 3 && styles.mainContainer3}
+            ${outdoorInfo === 'true' && styles.mainContainerOutdoor}
+            `}
+            >
               {true && (
                 <TemperatureHumidityComponent outdoorInfo={outdoorInfo} />
               )}

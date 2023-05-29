@@ -4,14 +4,19 @@ import styles from './styles.module.css';
 import PartnerDataContext from '../../Contexts/PartnerDataContext';
 import { getParametersExcludingTempHum } from '../../UtilityFunctions/Utils';
 
-const TopBar = () => {
+const TopBar = ({outdoorInfo = false}) => {
   const { partnerData } = useContext(PartnerDataContext);
 
   const parameterLength = getParametersExcludingTempHum(partnerData).length;
 
+  console.log('oooooo', outdoorInfo === 'true');
   return (
     <div className={`${styles.mainContainer} `}>
-      <div className={styles.logoContainer}>
+      <div
+        className={`${styles.logoContainer} ${
+          outdoorInfo === 'true' ? styles.logoContainerOutdoor : ''
+        }`}
+      >
         <img
           className={styles.logoImage1}
           src={ActiveBuildingLogoImage}

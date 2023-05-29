@@ -27,6 +27,14 @@
  height: 9vh;
 } 
 
+.infoOutdoorCard{
+  padding: 1vh 1vw;
+}
+
+.infoOutdoorCard2{
+  width: 47%;
+}
+
 .logoImage {
   height: 3.4vh;
   background-color: #69C28F;
@@ -49,9 +57,12 @@
   font-size: 2vh;
 }
 
+
+
 .infoOutdoorCard .infoTitle{
-  width:40%;
+  width:46%;
   padding: 1vh 0vw;
+font-size: 2.2vh;
 }
 
 
@@ -84,6 +95,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-left: 2.5vw;
 }
 
 .infoValue span:nth-child(2){

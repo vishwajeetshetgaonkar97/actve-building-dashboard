@@ -11,6 +11,10 @@
   align-items: center;
 }
 
+.logoContainerOutdoor{
+  padding-left: 1.5vw;
+}
+
 .logoImage1 {
   height: 4.6vh;
 }

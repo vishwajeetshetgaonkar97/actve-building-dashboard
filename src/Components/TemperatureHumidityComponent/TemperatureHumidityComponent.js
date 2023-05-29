@@ -15,7 +15,7 @@ import {
 } from '../../UtilityFunctions/Utils';
 import PartnerDataContext from '../../Contexts/PartnerDataContext';
 
-const TemperatureHumidityComponent = ({ outdoorInfo }) => {
+const TemperatureHumidityComponent = ({ outdoorInfo = false }) => {
   const { partnerData } = useContext(PartnerDataContext);
 
   const parameterLength = getParametersExcludingTempHum(partnerData).length;
@@ -28,15 +28,17 @@ const TemperatureHumidityComponent = ({ outdoorInfo }) => {
       <div
         className={`${styles.infoCard} 
         ${parameterLength >= 3 && styles.infoCard3}
-         ${(getIfTemperatureVisible(
-          partnerData,
-        ) ||
-          getIfHumidityVisible(partnerData)) &&
-          styles.infoCard2}  
+         ${(getIfTemperatureVisible(partnerData) ||
+           getIfHumidityVisible(partnerData)) &&
+           styles.infoCard2}  
           
-          ${getIfOutdoorTemperatureHumidityVisible(
-          partnerData,
-        ) && styles.infoOutdoorCard} `}
+          ${getIfOutdoorTemperatureHumidityVisible(partnerData) &&
+            styles.infoOutdoorCard}
+            ${getIfOutdoorTemperatureHumidityVisible(partnerData) &&
+              (getIfTemperatureVisible(partnerData) ||
+                getIfHumidityVisible(partnerData)) &&
+              styles.infoOutdoorCard2}
+            `}
       >
         <img className={styles.logoImage} src={HumidityIcon} alt="logo" />
         <div className={styles.infoTitle}>temperature</div>
@@ -64,14 +66,20 @@ const TemperatureHumidityComponent = ({ outdoorInfo }) => {
 
       {getIfTemperatureHumidityVisible(partnerData) && (
         <div
-          className={`${styles.infoCard} ${parameterLength >= 3 && styles.infoCard3}
-          ${(getIfTemperatureVisible(
-            partnerData,
-          ) ||
+          className={`${styles.infoCard} ${parameterLength >= 3 &&
+            styles.infoCard3}
+          ${(getIfTemperatureVisible(partnerData) ||
             getIfHumidityVisible(partnerData)) &&
             styles.infoCard2}  ${getIfOutdoorTemperatureHumidityVisible(
             partnerData,
-          ) && styles.infoOutdoorCard} `}
+          ) && styles.infoOutdoorCard} 
+
+          ${getIfOutdoorTemperatureHumidityVisible(partnerData) &&
+            (getIfTemperatureVisible(partnerData) ||
+              getIfHumidityVisible(partnerData)) &&
+            styles.infoOutdoorCard2}
+          
+          `}
         >
           <img className={styles.logoImage} src={TemperatureIcon} alt="logo" />
           <div className={styles.infoTitle}>Humidity</div>

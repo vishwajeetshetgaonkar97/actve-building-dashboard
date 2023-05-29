@@ -1,6 +1,8 @@
 export const IS_TEST = false;
 
-export const BASE_URL = 'https://pirhoalpha.com';
+// export const BASE_URL = 'https://pirhoalpha.com';
+ export const BASE_URL = 'http://54.82.58.207:80';
+
 // https://www.activebuildings.io/
 // www.pirhoalpha.com
 // export const BASE_URL = "https://www.pirhoalpha.com";
