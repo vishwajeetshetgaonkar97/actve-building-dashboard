@@ -37,8 +37,7 @@
 }
 
 .innerInfoCard2{
-padding: 0.4rem;
-margin-top: 1.5%;
+padding: 1.5vh 0.8vw;
 }
 
 .innerInfoCard3{
@@ -77,7 +76,7 @@ margin-top: 1.5%;
 }
 
 .infoImageContainer2{
-  width: 2.4rem;
+  width: 3vw;
   height: 90%;
   padding-top: 1.5%;
 }
@@ -126,7 +125,9 @@ margin-top: 1.5%;
 }
 
 .infoTitle2{
-width: 88%;
+width: 90%;
+height: 98%;
+padding-bottom: 1vh;
 }
 
 .infoTitle4{
@@ -188,8 +189,8 @@ width:77%
   padding-right: 1vw;
 }
 
-.infoTitle3 .infoValue{
-  font-size: 1.8vh !important;
+.infoTitle2 .infoValue{
+  font-size: 2.5vh !important;
  
  }
 
