@@ -8,7 +8,6 @@
 .column1,.column2,.column3,.column4{
   display: flex;
   width: 100%;
- 
 }
 
 .column12{
@@ -19,59 +18,62 @@ justify-content: space-between;
   width: 49.25%;
   flex-direction: column;
   justify-content: space-between;
-  height: 50vh;
+  height: 35.6vh;
 }
 
 .column14{
-  width: 32.5%;
+  width: 32%;
 }
 
 .column16{
-  width: 24%;
+  width: 23%;
 }
 
 .childContainer1,.childContainer2,.childContainer3,.childContainer4{
   display: flex;
   width: 100%;
-  height: 32vh;
+  height: 36.5vh;
 }
 
 .childContainer12{
-  width: 49.25%;
+  width: 48.7%;
 }
 
 .childContainer13{
-  height: 24vh;
+  height: 16vh;
+  
 }
 
 .column2{
-  width: 49.25%;
-  height: 50vh;
+  width: 48.25%;
+  height: 40vh;
 }
 
 .column21{
-  width: 32.5%;
+  width: 32%;
 }
 
 .column24{
-  width: 24%;
+  width: 23%;
 }
 
 .column28{
   flex-direction: column;
   justify-content: space-between;
+  height: 35.6vh;
 }
 
 .childContainer2{
-  height: 50vh;
+  height: 35.6vh;
 }
 
 .column3{
-  width: 32.5%;
+  width: 32%;
+  height: 35.6vh;
 }
 
 .column34{
-  width: 24%;
+  width: 23%;
 }
 
 .column32{
@@ -84,75 +86,23 @@ justify-content: space-between;
 }
 
 .childContainer32{
-  height: 24vh;
+  height: 16vh;
 }
 
 .column4{
-  width: 24%;
+  width: 23%;
 }
+
+.column42{
+  height: 35.6vh;
+}
+
 
 .childContainer4{
-  height: 50vh;
+  height: 35.6vh;
 }
+
 
 .childContainer42,.childContainer28{
-  height: 24vh;
-}
-
-
-
-@media screen and (max-width: 800px) {
-
-  .mainContainer {
-    border-bottom: 0px solid rgba(247, 245, 223, 0.6);
-   flex-direction: column;
-    padding-top: 0.5vh;
-    padding-bottom: 1vh;
-    justify-content: space-between;
-  }
-  
-  .logoContainer {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logoImage1 {
-    height: 6vh;
-  }
-  
-  .logoImage2 {
-    margin-left: 5vw;
-    height: 2.4vh;
-    font-size: 3vh;
-    margin-top: -2.2vh;
-  }
-  
-  .imageSeperatorBorder {
-    border: 1.5px solid #F7F5E0;
-    border-radius: 2px;
-    background-color: #F7F5E0;
-    height: 4vh;
-    margin-left: 1vw;
-  }
-  
-  .infoContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 2vh;
-    color: rgba(247, 245, 223, 0.6);
-    padding-left: 10vw;
-    padding-top: 1vh;
-    display: none;
-  }
-  
-  .infoInnerContainer {
-    width: 98vw;
-    
-  }
-  .infoInnerContainer div{
-    padding-top: 0.8vh;
-  }
-
-
+  height: 16vh;
 }

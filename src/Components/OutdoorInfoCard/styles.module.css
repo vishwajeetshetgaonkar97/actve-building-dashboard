@@ -4,7 +4,7 @@
   flex-direction: column;
   /* background-color: aqua; */
   background-color: #ffffff;
-  padding:  0.45rem;
+  padding:  1vh 1vw;
   border-radius: 1.5vh;
 } 
 
@@ -13,24 +13,25 @@
 }
 
 .infoCardTitle{
-  font-size:2vh;
+  font-size:2.4vh;
   font-weight: 600;
   text-transform: uppercase;
   color: #121212;
-  padding-left: 1.2%;
+  padding-left: 0.8vw;
+  padding-top: 1.6vh;
+  padding-bottom: 1vh;
 }
 
 .innerInfoCard{
   background-color: #ffffff;
   padding: 1% 1%;
-  padding-top: 1.5%;
   padding-right: 1.5%;
   width: 97.5%;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  border-radius: 1.5vh;
-  box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 1vh;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.05);
   height: 42%;
   margin-top: 0.5%;
 }
@@ -70,7 +71,7 @@ margin-top: 1.5%;
   padding: 0.5%;
   border-radius: 0.8vh;
   height: 92%;
-  width: 4%;
+  width: 2.5vw;
   display: flex;
   justify-content: center;
 }
@@ -103,23 +104,25 @@ margin-top: 1.5%;
 
 .infoImageModerateContainer{
   background-color: #F8D457;
+  
 }
 
 
 .logoImage {
-  height: 1.4rem;
+  height: 3.8vh;
+  margin-top: 0.5vh;
 }
 
 
 .infoTitle{
   color: #212121;
   text-transform: uppercase;
-  width:94%;
- height: 100%;
+  width:95%;
+ height: 98%;
+ padding-bottom: 2vh;
  display: flex;
  flex-direction: column;
  justify-content: space-between;
-  /* background-color: antiquewhite; */
 }
 
 .infoTitle2{
@@ -136,10 +139,10 @@ width:77%
 }
 
 .infoTitle div{
- font-size: 0.8rem;
+ font-size: 2.6vh;
  color: #121212;
  font-weight: 400;
-padding-top: 0.5rem;
+ padding-top: 2vh;
 }
 
 .infoTitle3 div{
@@ -154,7 +157,7 @@ padding-top: 0.5rem;
 
 .infoTitle span{
   display: flex;
-  font-size: 1.4rem;
+  font-size: 2.4vh;
   font-weight: 600;
   justify-content: baseline;
   width: 100%;
@@ -162,8 +165,8 @@ padding-top: 0.5rem;
  }
 
  .infoTitle span div{
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: 3.4vh;
+  font-family: AvenirLT-Black;
  width: 50%;
  }
 
@@ -176,12 +179,13 @@ padding-top: 0.5rem;
  }
 
 .infoValue{
-  font-size: 1rem !important;
+  font-size: 3.4vh !important;
   color: #121212;
   font-weight: 400 !important;
   width: 50%;
   text-align: right;
   text-transform: lowercase;
+  padding-right: 1vw;
 }
 
 .infoTitle3 .infoValue{
@@ -201,60 +205,3 @@ padding-top: 0.5rem;
   height: 25vh;
 }
 
-
-
-@media screen and (max-width: 800px) {
-
-  .mainContainer {
-    border-bottom: 0px solid rgba(247, 245, 223, 0.6);
-   flex-direction: column;
-    padding-top: 0.5vh;
-    padding-bottom: 1vh;
-    justify-content: space-between;
-  }
-  
-  .logoContainer {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logoImage1 {
-    height: 6vh;
-  }
-  
-  .logoImage2 {
-    margin-left: 5vw;
-    height: 2.4vh;
-    font-size: 3vh;
-    margin-top: -2.2vh;
-  }
-  
-  .imageSeperatorBorder {
-    border: 1.5px solid #F7F5E0;
-    border-radius: 2px;
-    background-color: #F7F5E0;
-    height: 4vh;
-    margin-left: 1vw;
-  }
-  
-  .infoContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 2vh;
-    color: rgba(247, 245, 223, 0.6);
-    padding-left: 10vw;
-    padding-top: 1vh;
-    display: none;
-  }
-  
-  .infoInnerContainer {
-    width: 98vw;
-    
-  }
-  .infoInnerContainer div{
-    padding-top: 0.8vh;
-  }
-
-
-}
