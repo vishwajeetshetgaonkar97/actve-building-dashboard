@@ -27,17 +27,25 @@ const TemperatureHumidityComponent = ({ outdoorInfo = false }) => {
     >
       <div
         className={`${styles.infoCard} 
-        ${parameterLength >= 3 && styles.infoCard3}
+        ${parameterLength >= 3 &&
+          getIfOutdoorTemperatureHumidityVisible(partnerData) &&
+          styles.infoCard3}
          ${(getIfTemperatureVisible(partnerData) ||
            getIfHumidityVisible(partnerData)) &&
            styles.infoCard2}  
           
           ${getIfOutdoorTemperatureHumidityVisible(partnerData) &&
             styles.infoOutdoorCard}
+            
             ${getIfOutdoorTemperatureHumidityVisible(partnerData) &&
               (getIfTemperatureVisible(partnerData) ||
                 getIfHumidityVisible(partnerData)) &&
               styles.infoOutdoorCard2}
+
+              ${parameterLength >= 3 &&
+                getIfOutdoorTemperatureHumidityVisible(partnerData) &&
+                styles.infoOutdoorCard3}
+
             `}
       >
         <img className={styles.logoImage} src={HumidityIcon} alt="logo" />
@@ -79,6 +87,11 @@ const TemperatureHumidityComponent = ({ outdoorInfo = false }) => {
               getIfHumidityVisible(partnerData)) &&
             styles.infoOutdoorCard2}
           
+            ${parameterLength >= 3 &&
+              getIfOutdoorTemperatureHumidityVisible(partnerData) &&
+              styles.infoOutdoorCard3}
+
+            
           `}
         >
           <img className={styles.logoImage} src={TemperatureIcon} alt="logo" />

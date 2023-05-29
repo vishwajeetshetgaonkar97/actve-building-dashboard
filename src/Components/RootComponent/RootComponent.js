@@ -133,6 +133,9 @@ const RootComponent = ({ outdoorInfo = false }) => {
               className={`${styles.mainContainer} 
             ${parameterLength >= 3 && styles.mainContainer3}
             ${outdoorInfo === 'true' && styles.mainContainerOutdoor}
+            ${outdoorInfo === 'true' &&
+              parameterLength >= 3 &&
+              styles.mainContainerOutdoor3}
             `}
             >
               {true && (

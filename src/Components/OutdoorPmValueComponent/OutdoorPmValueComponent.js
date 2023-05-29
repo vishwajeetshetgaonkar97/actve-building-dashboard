@@ -20,7 +20,10 @@ const OutdoorPmValueComponent = () => {
   const parameterLength = getParametersExcludingTempHum(partnerData).length;
 
   return (
-    <div className={styles.mainContainer}>
+    <div
+      className={`${styles.mainContainer} 
+    ${parameterLength >= 3 && styles.mainContainer3}`}
+    >
       <div
         className={`${styles.column1} 
       ${parameterLength >= 2 && styles.column12}

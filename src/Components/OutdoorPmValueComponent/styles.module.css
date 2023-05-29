@@ -5,6 +5,7 @@
   margin: 1vh;
 }
 
+
 .column1,.column2,.column3,.column4{
   display: flex;
   width: 100%;
@@ -40,13 +41,13 @@ justify-content: space-between;
 }
 
 .childContainer13{
-  height: 16vh;
+  height: 21.5vh;
   
 }
 
 .column2{
   width: 48.25%;
-  height: 40vh;
+  height: 21.5vh;
 }
 
 .column21{
