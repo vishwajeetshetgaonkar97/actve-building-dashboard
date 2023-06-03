@@ -27,6 +27,11 @@
   font-size: 2vh;
 }
 
+.infoCardTitle2{
+  padding-top: 0vh;
+  font-size: 1.8vh;
+}
+
 .innerInfoCard{
   background-color: #ffffff;
   padding: 1% 1%;
@@ -45,6 +50,11 @@
   margin-top: 0.8vh;
 }
 
+.innerInfoCardBelow1{
+  margin-top: 0.8vh !important;
+  
+}
+
 .innerInfoCard2{
 padding: 1.5vh 0.8vw;
 }
@@ -55,8 +65,10 @@ padding: 1.5vh 0.8vw;
 }
 
 .innerInfoCard4{
-  height: 28% !important;
-  width: 95% !important;
+  height: 4.2vh !important;
+  width: 96% !important;
+  padding: 1.5vh;
+  margin-top: 0vh;
 }
 
 .innerInfoCard6{
@@ -93,12 +105,14 @@ padding: 1.5vh 0.8vw;
   height: 78%;
   width: 3.2vw;
   margin-left: 0.4vw;
+  
 }
 
 .infoImageContainer4{
   height: 92%;
-  /* width: 2rem; */
-  padding-top: 2%;
+  width: 1.8vw;
+  margin-left: 0vw;
+  border-radius: 0.2vh;
 }
 
 .infoImageContainer6{
@@ -126,6 +140,11 @@ padding: 1.5vh 0.8vw;
   margin-top: 0.4vh;
 }
 
+.innerInfoCard4 .logoImage{
+  height: 2.4vh;
+  margin-top: 0.4vh;
+}
+
 .infoTitle{
   color: #212121;
   text-transform: uppercase;
@@ -148,7 +167,7 @@ padding-bottom: 1vh;
   }
 
 .infoTitle4{
-width: 83%;
+width: 88%;
 
 }
 
@@ -166,6 +185,11 @@ width:77%
 .infoTitle3 div{
   font-size: 1.6vh;
   padding-top: 0.9vh;
+}
+
+.infoTitle4 div{
+  font-size: 1.6vh;
+  padding-top: 0.5vh;
 }
 
 .infoTitle6 div{

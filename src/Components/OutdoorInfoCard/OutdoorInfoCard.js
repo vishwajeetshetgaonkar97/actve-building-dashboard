@@ -17,6 +17,7 @@ const OutdoorInfoCard = ({
   conditionOut = '',
   noOfCards = 1,
   isLong = false,
+  isBelow = false,
 }) => {
   const { partnerData } = useContext(PartnerDataContext);
 
@@ -28,7 +29,9 @@ const OutdoorInfoCard = ({
 
   return (
     <div className={`${styles.infoCard} ${isLong && styles.infoCardLong}`}>
-      <div className={`${styles.infoCardTitle} ${noOfCards >= 3 && styles.infoCardTitle1}`}>{title}</div>
+      <div className={`${styles.infoCardTitle} 
+      ${noOfCards >= 3 && styles.infoCardTitle1} 
+      ${noOfCards >= 4 && styles.infoCardTitle2}`}>{title}</div>
       <div
         className={`${styles.innerInfoCard}  
         ${isLong && styles.innerInfoCardLong}
@@ -72,7 +75,10 @@ const OutdoorInfoCard = ({
       </div>
 
       <div
-        className={`${`${styles.innerInfoCard} ${noOfCards >= 3 && styles.innerInfoCardBelow}`}  
+        className={`${`${styles.innerInfoCard} 
+        ${noOfCards >= 3 && styles.innerInfoCardBelow}
+        ${noOfCards >= 4 && styles.innerInfoCardBelow1}
+        `}  
        ${isLong && styles.innerInfoCardLong}
        ${noOfCards >= 2 && styles.innerInfoCard2}
        ${noOfCards >= 3 && styles.innerInfoCard3}

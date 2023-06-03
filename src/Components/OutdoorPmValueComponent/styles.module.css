@@ -43,7 +43,10 @@ justify-content: space-between;
 
 .childContainer13{
   height: 21vh;
-  background-color: aqua;
+  
+}
+.childContainer14{
+  height: 20vh;
   
 }
 
@@ -53,7 +56,8 @@ justify-content: space-between;
 }
 
 .column21{
-  width: 32%;
+  width: 32.5%;
+  
 }
 
 .column24{
@@ -71,8 +75,8 @@ justify-content: space-between;
 }
 
 .column3{
-  width: 32%;
-  height: 35.6vh;
+  width: 32.5%;
+  height: 43vh;
 }
 
 .column34{
