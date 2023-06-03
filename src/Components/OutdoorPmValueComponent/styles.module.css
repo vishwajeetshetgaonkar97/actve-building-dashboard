@@ -19,7 +19,7 @@ justify-content: space-between;
   width: 49.25%;
   flex-direction: column;
   justify-content: space-between;
-  height: 35.6vh;
+  height: 43vh;
 }
 
 .column14{
@@ -38,16 +38,18 @@ justify-content: space-between;
 
 .childContainer12{
   width: 49.5%;
+
 }
 
 .childContainer13{
-  height: 21.5vh;
+  height: 21vh;
+  background-color: aqua;
   
 }
 
 .column2{
-  width: 48.25%;
-  height: 21.5vh;
+  width: 49.5%;
+  height: 22.5vh;
 }
 
 .column21{
@@ -65,7 +67,7 @@ justify-content: space-between;
 }
 
 .childContainer2{
-  height: 35.6vh;
+  height: 43vh;
 }
 
 .column3{

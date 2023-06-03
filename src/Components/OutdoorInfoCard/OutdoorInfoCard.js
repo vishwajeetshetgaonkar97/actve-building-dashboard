@@ -28,7 +28,7 @@ const OutdoorInfoCard = ({
 
   return (
     <div className={`${styles.infoCard} ${isLong && styles.infoCardLong}`}>
-      <div className={styles.infoCardTitle}>{title}</div>
+      <div className={`${styles.infoCardTitle} ${noOfCards >= 3 && styles.infoCardTitle1}`}>{title}</div>
       <div
         className={`${styles.innerInfoCard}  
         ${isLong && styles.innerInfoCardLong}
@@ -72,7 +72,7 @@ const OutdoorInfoCard = ({
       </div>
 
       <div
-        className={`${styles.innerInfoCard}  
+        className={`${`${styles.innerInfoCard} ${noOfCards >= 3 && styles.innerInfoCardBelow}`}  
        ${isLong && styles.innerInfoCardLong}
        ${noOfCards >= 2 && styles.innerInfoCard2}
        ${noOfCards >= 3 && styles.innerInfoCard3}

@@ -22,6 +22,11 @@
   padding-bottom: 1vh;
 }
 
+.infoCardTitle1{
+  padding-top: 0.5vh;
+  font-size: 2vh;
+}
+
 .innerInfoCard{
   background-color: #ffffff;
   padding: 1% 1%;
@@ -36,14 +41,17 @@
   margin-top: 0.5%;
 }
 
+.innerInfoCardBelow{
+  margin-top: 0.8vh;
+}
+
 .innerInfoCard2{
 padding: 1.5vh 0.8vw;
 }
 
 .innerInfoCard3{
-  padding: 0.5rem;
-  height: 27% !important;
-  width: 96.4% !important;
+  padding: 1vh;
+  height: 5.2vh !important;
 }
 
 .innerInfoCard4{
@@ -58,7 +66,7 @@ padding: 1.5vh 0.8vw;
 }
 
 .innerInfoCardLong{
-  height: 24% !important;
+  height: 20% !important;
 }
 
 .innerInfoCard{
@@ -82,8 +90,9 @@ padding: 1.5vh 0.8vw;
 }
 
 .infoImageContainer3{
-  height: 88%;
-  width: 2rem;
+  height: 78%;
+  width: 3.2vw;
+  margin-left: 0.4vw;
 }
 
 .infoImageContainer4{
@@ -112,6 +121,10 @@ padding: 1.5vh 0.8vw;
   margin-top: 0.5vh;
 }
 
+.innerInfoCard3 .logoImage{
+  height: 3vh;
+  margin-top: 0.4vh;
+}
 
 .infoTitle{
   color: #212121;
@@ -129,6 +142,10 @@ width: 90%;
 height: 98%;
 padding-bottom: 1vh;
 }
+
+.infoTitle3{
+  width: 88% ;
+  }
 
 .infoTitle4{
 width: 83%;
@@ -148,7 +165,7 @@ width:77%
 
 .infoTitle3 div{
   font-size: 1.6vh;
-  padding-top: 0.1rem;
+  padding-top: 0.9vh;
 }
 
 .infoTitle6 div{
@@ -173,6 +190,7 @@ width:77%
 
  .infoTitle3 span div{
   font-size: 2.7vh;
+  padding-top: 0;
  }
 
  .infoTitle6 span div{
@@ -191,6 +209,11 @@ width:77%
 
 .infoTitle2 .infoValue{
   font-size: 2.5vh !important;
+ 
+ }
+
+ .infoTitle3 .infoValue{
+  font-size: 2vh !important;
  
  }
 
