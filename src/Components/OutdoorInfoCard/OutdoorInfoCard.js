@@ -85,6 +85,7 @@ const OutdoorInfoCard = ({
         className={`${`${styles.innerInfoCard} 
         ${noOfCards >= 3 && styles.innerInfoCardBelow}
         ${noOfCards >= 4 && styles.innerInfoCardBelow1}
+        ${noOfCards >= 6 && styles.innerInfoCardBelow2}
         `}  
        ${isLong && styles.innerInfoCardLong}
        ${noOfCards >= 2 && styles.innerInfoCard2}

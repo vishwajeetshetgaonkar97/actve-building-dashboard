@@ -37,6 +37,7 @@ const OutdoorPmValueComponent = () => {
         ${parameterLength === 2 && styles.childContainer12}
         ${parameterLength >= 3 && styles.childContainer13}
         ${parameterLength >= 4 && styles.childContainer14}
+        ${parameterLength >= 6 && styles.childContainer16}
         `}
         >
           <OutdoorInfoCard

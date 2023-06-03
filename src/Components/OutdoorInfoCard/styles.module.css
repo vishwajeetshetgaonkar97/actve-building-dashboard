@@ -10,6 +10,7 @@
 
 .infoCard6{
   padding:  1.8vh 0.6vw;
+  padding-bottom: 1.2vh;
 }
 
 .infoCardLong{
@@ -64,6 +65,10 @@
   
 }
 
+.innerInfoCardBelow2{
+
+}
+
 .innerInfoCard2{
 padding: 1.5vh 0.8vw;
 }
@@ -81,7 +86,7 @@ padding: 1.5vh 0.8vw;
 }
 
 .innerInfoCard6{
-  height: 6vh !important;
+  height: 6.2vh !important;
   width: 94% !important;
   padding: 1vh !important;
   padding-top: 2vh;
@@ -188,7 +193,7 @@ width: 88%;
 }
 
 .infoTitle6{
-width:88%
+width:88%;
 }
 
 .infoTitle div{
@@ -265,7 +270,7 @@ width:88%
  
 .infoTitle6 .infoValue{
   font-size: 1.7vh !important;
- 
+
  }
 
 .childContainer1{
