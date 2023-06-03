@@ -136,6 +136,10 @@ const RootComponent = ({ outdoorInfo = false }) => {
             ${outdoorInfo === 'true' &&
               parameterLength >= 3 &&
               styles.mainContainerOutdoor3}
+              ${outdoorInfo === 'true' &&
+              parameterLength >= 6 &&
+              styles.mainContainerOutdoor6}
+
             `}
             >
               {true && (

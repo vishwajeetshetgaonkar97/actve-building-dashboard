@@ -45,6 +45,9 @@ const TemperatureHumidityComponent = ({ outdoorInfo = false }) => {
               ${parameterLength >= 3 &&
                 getIfOutdoorTemperatureHumidityVisible(partnerData) &&
                 styles.infoOutdoorCard3}
+                ${parameterLength >= 6 &&
+                  getIfOutdoorTemperatureHumidityVisible(partnerData) &&
+                  styles.infoOutdoorCard6}
 
             `}
       >

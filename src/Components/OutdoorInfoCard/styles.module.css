@@ -8,6 +8,10 @@
   border-radius: 1.5vh;
 } 
 
+.infoCard6{
+  padding:  1.8vh 0.6vw;
+}
+
 .infoCardLong{
   justify-content: flex-end;
 }
@@ -30,6 +34,11 @@
 .infoCardTitle2{
   padding-top: 0vh;
   font-size: 1.8vh;
+}
+
+.infoCardTitle3{
+  font-size: 1.6vh;
+  padding-left: 0.5vw;
 }
 
 .innerInfoCard{
@@ -72,9 +81,10 @@ padding: 1.5vh 0.8vw;
 }
 
 .innerInfoCard6{
-  height: 28% !important;
-  width: 92.5% !important;
-  margin-top: 2%;
+  height: 6vh !important;
+  width: 94% !important;
+  padding: 1vh !important;
+  padding-top: 2vh;
 }
 
 .innerInfoCardLong{
@@ -116,8 +126,9 @@ padding: 1.5vh 0.8vw;
 }
 
 .infoImageContainer6{
-  height: 83%;
-  padding-top: 4%;
+  height: 90%;
+  width: 1.4vw;
+  
 }
 
 .infoImageBadContainer{
@@ -142,6 +153,11 @@ padding: 1.5vh 0.8vw;
 
 .innerInfoCard4 .logoImage{
   height: 2.4vh;
+  margin-top: 0.4vh;
+}
+
+.innerInfoCard6 .logoImage{
+  height: 2vh;
   margin-top: 0.4vh;
 }
 
@@ -172,7 +188,7 @@ width: 88%;
 }
 
 .infoTitle6{
-width:77%
+width:88%
 }
 
 .infoTitle div{
@@ -194,7 +210,11 @@ width:77%
 
 .infoTitle6 div{
   font-size: 1.45vh;
-  padding-top: 0.2rem;
+  padding-top: 1vh;
+}
+
+.innerInfoCardLong  .infoTitle6 div{
+  padding-top: 2vh;
 }
 
 .infoTitle span{
@@ -218,7 +238,8 @@ width:77%
  }
 
  .infoTitle6 span div{
-  font-size: 2.6vh;
+  font-size: 2.7vh;
+  padding-top: 0.3vh;
  }
 
 .infoValue{
