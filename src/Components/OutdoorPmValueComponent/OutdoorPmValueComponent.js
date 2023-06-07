@@ -80,7 +80,7 @@ const OutdoorPmValueComponent = () => {
         >
           <div
             className={`${styles.childContainer2} ${parameterLength === 2 &&
-              styles.childContainer22} ${parameterLength === 8 &&
+              styles.childContainer22} ${parameterLength >= 8 &&
               styles.childContainer28}`}
           >
             <OutdoorInfoCard
@@ -102,7 +102,7 @@ const OutdoorPmValueComponent = () => {
 
           {parameterLength >= 8 && (
             <div
-              className={`${styles.childContainer2} ${parameterLength === 8 &&
+              className={`${styles.childContainer2} ${parameterLength >= 8 &&
                 styles.childContainer28}`}
             >
               <OutdoorInfoCard
