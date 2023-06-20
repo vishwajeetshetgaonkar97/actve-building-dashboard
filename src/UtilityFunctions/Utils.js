@@ -2,6 +2,7 @@ const urlSearchParams = new URLSearchParams(window.location.search);
 const params = Object.fromEntries(urlSearchParams.entries());
 const { unique_id = '', outdoorInfo = false } = params;
 
+
 const getFixedDigitsNumber = (number = 0, gameStateData = null) => {
   return number.toLocaleString('en-US', {
     minimumIntegerDigits: 2,
@@ -529,7 +530,9 @@ const gettvocValue = partnerInfo => {
     partnerInfo.data_logs[0].tvoc &&
     partnerInfo.data_logs[0].tvoc.value
   )
-    return `${partnerInfo.data_logs[0].tvoc.value} ppb`;
+    return `${partnerInfo.data_logs[0].tvoc.value} ${
+      unique_id === 'uwcSmVLB' ? 'ug/m3' : 'ppb'
+    }`;
   return `-`;
 };
 
