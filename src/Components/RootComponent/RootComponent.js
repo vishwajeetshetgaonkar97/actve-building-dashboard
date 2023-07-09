@@ -67,7 +67,7 @@ const RootComponent = ({ outdoorInfo = false }) => {
     deviceRef.current.intervalId = setInterval(() => {
       console.log('loop');
       handleDeviceIndex();
-    }, 2000);
+    }, 5000);
     return () => {
       clearInterval(deviceRef.current.intervalId);
     };
