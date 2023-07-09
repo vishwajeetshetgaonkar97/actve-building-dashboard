@@ -4,13 +4,6 @@ import ModerateIcon from '../../Assets/ModerateIcon.png';
 import BadIcon from '../../Assets/BadIcon.png';
 import styles from './styles.module.css';
 import PartnerDataContext from '../../Contexts/PartnerDataContext';
-import {
-  getIndoorInfoName,
-  getIndoorInfoValue,
-  getIndoorInfoValueCondition,
-  getParametersExcludingTempHum,
-  getPm25Value,
-} from '../../UtilityFunctions/Utils';
 
 const IndoorInfoCard = ({
   title = '',

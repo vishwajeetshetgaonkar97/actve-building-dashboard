@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState, useContext } from 'react';
+import React, { useEffect, useMemo, useState, useContext, useRef } from 'react';
 import getBuildingDeviceList from '../../api/getBuildingDeviceList';
 import getDeviceLatestLog from '../../api/getDeviceLatestLog';
 import getDevicePastLatestLogs from '../../api/getDevicePastLatestLogs';
@@ -8,21 +8,25 @@ import DeviceLatestLogDataContext from '../../Contexts/DeviceLatestLogDataContex
 import DeviceLatestPastLogDataContext from '../../Contexts/DeviceLatestPastLogDataContext';
 import PartnerDataContext from '../../Contexts/PartnerDataContext';
 import {
+  getDataLogByIndex,
   getDefaultLat,
   getDefaultLon,
   getIfOutdoorTemperatureHumidityVisible,
   getIfTemperatureHumidityVisible,
   getParametersExcludingTempHum,
 } from '../../UtilityFunctions/Utils';
-import AreaSelection from '../AreaSelection/AreaSelection';
-import InfoDisplay from '../InfoDisplay/InfoDisplay';
 import styles from './styles.module.css';
 import TemperatureHumidityComponent from '../TemperatureHumidityComponent/TemperatureHumidityComponent';
 import PmValueComponent from '../PmValueComponent/PmValueComponent';
-import TableComponent from './TableComponent/TableComponent';
 import OutdoorPmValueComponent from '../OutdoorPmValueComponent/OutdoorPmValueComponent';
 
 const RootComponent = ({ outdoorInfo = false }) => {
+  const deviceRef = useRef({ intervalId: null });
+
+  const dataIndex = useRef({ index: 0 });
+
+  const [buildingIndexInfo, setBuildingIndexInfo] = useState(null);
+
   const [buildingIndex, setBuildingIndex] = useState(0);
   const [buildingDeviceValue, setBuildingDeviceValue] = useState(null);
 
@@ -31,7 +35,43 @@ const RootComponent = ({ outdoorInfo = false }) => {
   const [deviceLatestLogData, setDeviceLatestLogData] = useState(null);
   const [deviceLatestPastLogData, setDeviceLatestPastLogData] = useState(null);
 
-  const { partnerData } = useContext(PartnerDataContext);
+  const { partnerData, partnerDataIndex, setPartnerDataIndex } = useContext(
+    PartnerDataContext,
+  );
+
+  const handleDeviceIndex = () => {
+    if (
+      partnerData &&
+      partnerData.data_logs &&
+      partnerData.data_logs.length > 0
+    ) {
+      if (dataIndex.current.index < partnerData.data_logs.length - 1) {
+        dataIndex.current.index = dataIndex.current.index + 1;
+        console.log(
+          'information',
+          getDataLogByIndex(partnerData, dataIndex.current.index),
+        );
+        setBuildingIndexInfo(
+          getDataLogByIndex(partnerData, dataIndex.current.index),
+        );
+        return;
+      }
+      dataIndex.current.index = 0;
+      setBuildingIndexInfo(getDataLogByIndex(partnerData, 0));
+    }
+  };
+
+
+  // referesh devices every 5 sec
+  useEffect(() => {
+    deviceRef.current.intervalId = setInterval(() => {
+      console.log('loop');
+      handleDeviceIndex();
+    }, 2000);
+    return () => {
+      clearInterval(deviceRef.current.intervalId);
+    };
+  }, []);
 
   const getDeviceLatestLogInfo = async (deviceIndex = 0) => {
     try {
@@ -82,8 +122,13 @@ const RootComponent = ({ outdoorInfo = false }) => {
   };
 
   const BuildingDataContextValue = useMemo(
-    () => ({ buildingData, setBuildingData }),
-    [buildingData, setBuildingData],
+    () => ({
+      buildingData,
+      setBuildingData,
+      buildingIndexInfo,
+      setBuildingIndexInfo,
+    }),
+    [buildingData, setBuildingData, buildingIndexInfo, setBuildingIndexInfo],
   );
 
   const BuildingDeviceListDataContextValue = useMemo(
@@ -116,6 +161,8 @@ const RootComponent = ({ outdoorInfo = false }) => {
 
   console.log('out', outdoorInfo);
 
+  console.log('indooo', partnerData);
+
   const parameterLength = getParametersExcludingTempHum(partnerData).length;
 
   return (
@@ -137,18 +184,21 @@ const RootComponent = ({ outdoorInfo = false }) => {
               parameterLength >= 3 &&
               styles.mainContainerOutdoor3}
               ${outdoorInfo === 'true' &&
-              parameterLength >= 6 &&
-              styles.mainContainerOutdoor6}
+                parameterLength >= 6 &&
+                styles.mainContainerOutdoor6}
 
             `}
             >
               {true && (
-                <TemperatureHumidityComponent outdoorInfo={outdoorInfo} />
+                <TemperatureHumidityComponent
+                  outdoorInfo={outdoorInfo}
+                  dataIndex={dataIndex.current.index}
+                />
               )}
               {outdoorInfo === 'true' ? (
                 <OutdoorPmValueComponent />
               ) : (
-                <PmValueComponent />
+                <PmValueComponent dataIndex={dataIndex.current.index} />
               )}
             </div>
           </DeviceLatestPastLogDataContext.Provider>

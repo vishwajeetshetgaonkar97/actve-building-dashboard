@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import GoodIcon from '../../Assets/GoodIcon.png';
 import styles from './styles.module.css';
 import PartnerDataContext from '../../Contexts/PartnerDataContext';
@@ -10,16 +10,26 @@ import {
   getPm25Value,
 } from '../../UtilityFunctions/Utils';
 import IndoorInfoCard from '../IndoorInfoCard/IndoorInfoCard';
+import BuildingDataContext from '../../Contexts/BuildingDataContext';
 
-const PmValueComponent = () => {
-  const { partnerData } = useContext(PartnerDataContext);
+const PmValueComponent = ({ dataIndex = 0 }) => {
+  const { partnerData, parnerDataIndex } = useContext(PartnerDataContext);
+
+  const { buildingIndexInfo } = useContext(BuildingDataContext);
 
   const parameterLength = getParametersExcludingTempHum(partnerData).length;
 
+  console.log('informationnnnnnnnnnnnnnnnnnnnnnnnnnnnnn', parnerDataIndex);
+
+  useEffect(() => {
+    console.log('yes things have been changed', buildingIndexInfo);
+  }, [buildingIndexInfo]);
+
   return (
     <div
-     className={`${styles.mainContainer} 
-    ${parameterLength >= 3 && styles.mainContainer3}`}>
+      className={`${styles.mainContainer} 
+    ${parameterLength >= 3 && styles.mainContainer3}`}
+    >
       <div
         className={`${styles.column1} 
         ${parameterLength >= 2 && styles.column12}
@@ -36,8 +46,8 @@ const PmValueComponent = () => {
         >
           <IndoorInfoCard
             title={getIndoorInfoName(partnerData, 0)}
-            value={getIndoorInfoValue(partnerData, 0)}
-            condition={getIndoorInfoValueCondition(partnerData, 0)}
+            value={getIndoorInfoValue(partnerData, 0, dataIndex)}
+            condition={getIndoorInfoValueCondition(partnerData, 0, dataIndex)}
             noOfCards={parameterLength}
           />
         </div>
@@ -52,8 +62,8 @@ const PmValueComponent = () => {
           >
             <IndoorInfoCard
               title={getIndoorInfoName(partnerData, 1)}
-              value={getIndoorInfoValue(partnerData, 1)}
-              condition={getIndoorInfoValueCondition(partnerData, 1)}
+              value={getIndoorInfoValue(partnerData, 1, dataIndex)}
+              condition={getIndoorInfoValueCondition(partnerData, 1, dataIndex)}
               noOfCards={parameterLength}
             />
           </div>
@@ -71,12 +81,12 @@ const PmValueComponent = () => {
           <div
             className={`${styles.childContainer2} ${parameterLength === 2 &&
               styles.childContainer22} ${parameterLength === 8 &&
-                styles.childContainer28}`}
+              styles.childContainer28}`}
           >
             <IndoorInfoCard
               title={getIndoorInfoName(partnerData, 2)}
-              value={getIndoorInfoValue(partnerData, 2)}
-              condition={getIndoorInfoValueCondition(partnerData, 2)}
+              value={getIndoorInfoValue(partnerData, 2, dataIndex)}
+              condition={getIndoorInfoValueCondition(partnerData, 2, dataIndex)}
               noOfCards={parameterLength}
               isLong={
                 parameterLength === 3 ||
@@ -95,8 +105,12 @@ const PmValueComponent = () => {
             >
               <IndoorInfoCard
                 title={getIndoorInfoName(partnerData, 7)}
-                value={getIndoorInfoValue(partnerData, 7)}
-                condition={getIndoorInfoValueCondition(partnerData, 7)}
+                value={getIndoorInfoValue(partnerData, 7, dataIndex)}
+                condition={getIndoorInfoValueCondition(
+                  partnerData,
+                  7,
+                  dataIndex,
+                )}
                 noOfCards={parameterLength}
               />
             </div>
@@ -119,8 +133,8 @@ const PmValueComponent = () => {
           >
             <IndoorInfoCard
               title={getIndoorInfoName(partnerData, 3)}
-              value={getIndoorInfoValue(partnerData, 3)}
-              condition={getIndoorInfoValueCondition(partnerData, 3)}
+              value={getIndoorInfoValue(partnerData, 3, dataIndex)}
+              condition={getIndoorInfoValueCondition(partnerData, 3, dataIndex)}
               noOfCards={parameterLength}
               isLong={parameterLength === 3 || parameterLength === 4}
             />
@@ -133,8 +147,12 @@ const PmValueComponent = () => {
             >
               <IndoorInfoCard
                 title={getIndoorInfoName(partnerData, 4)}
-                value={getIndoorInfoValue(partnerData, 4)}
-                condition={getIndoorInfoValueCondition(partnerData, 4)}
+                value={getIndoorInfoValue(partnerData, 4, dataIndex)}
+                condition={getIndoorInfoValueCondition(
+                  partnerData,
+                  4,
+                  dataIndex,
+                )}
                 noOfCards={parameterLength}
               />
             </div>
@@ -158,10 +176,10 @@ const PmValueComponent = () => {
           >
             <IndoorInfoCard
               title={getIndoorInfoName(partnerData, 5)}
-              value={getIndoorInfoValue(partnerData, 5)}
-              condition={getIndoorInfoValueCondition(partnerData, 5)}
+              value={getIndoorInfoValue(partnerData, 5, dataIndex)}
+              condition={getIndoorInfoValueCondition(partnerData, 5, dataIndex)}
               noOfCards={parameterLength}
-              isLong={parameterLength === 6 }
+              isLong={parameterLength === 6}
             />
           </div>
 
@@ -172,8 +190,12 @@ const PmValueComponent = () => {
             >
               <IndoorInfoCard
                 title={getIndoorInfoName(partnerData, 6)}
-                value={getIndoorInfoValue(partnerData, 6)}
-                condition={getIndoorInfoValueCondition(partnerData, 6)}
+                value={getIndoorInfoValue(partnerData, 6, dataIndex)}
+                condition={getIndoorInfoValueCondition(
+                  partnerData,
+                  6,
+                  dataIndex,
+                )}
                 noOfCards={parameterLength}
               />
             </div>

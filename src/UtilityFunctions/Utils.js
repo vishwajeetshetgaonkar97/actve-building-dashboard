@@ -2,7 +2,6 @@ const urlSearchParams = new URLSearchParams(window.location.search);
 const params = Object.fromEntries(urlSearchParams.entries());
 const { unique_id = '', outdoorInfo = false } = params;
 
-
 const getFixedDigitsNumber = (number = 0, gameStateData = null) => {
   return number.toLocaleString('en-US', {
     minimumIntegerDigits: 2,
@@ -409,7 +408,6 @@ const getParametersExcludingTempHum = partnerInfo => {
 };
 
 const getIfTemperatureHumidityVisible = partnerInfo => {
-
   if (
     partnerInfo &&
     partnerInfo.indoor_params &&
@@ -456,14 +454,21 @@ const getIfHumidityVisible = partnerInfo => {
   return false;
 };
 
-const getTemperature = partnerInfo => {
+const getTemperature = (partnerInfo,deviceIndex=0) => {
+  console.log("temerature index inside",deviceIndex)
   if (
     partnerInfo &&
     partnerInfo.indoor_params &&
     partnerInfo.data_logs &&
     partnerInfo.indoor_params.includes('temp')
   )
-    return `${partnerInfo.data_logs[0].temp.value}°C`;
+   {
+    console.log("temp index",deviceIndex)
+    
+    console.log("temp index",partnerInfo.data_logs[deviceIndex].temp.value)
+    
+    
+    return `${partnerInfo.data_logs[deviceIndex].temp.value}°C`;}
   return `-`;
 };
 
@@ -477,14 +482,14 @@ const getOutdoorTemperature = partnerInfo => {
   return `-`;
 };
 
-const getHumidity = partnerInfo => {
+const getHumidity = (partnerInfo,deviceIndex=0) => {
   if (
     partnerInfo &&
     partnerInfo.indoor_params &&
     partnerInfo.data_logs &&
     partnerInfo.indoor_params.includes('hum')
   )
-    return `${partnerInfo.data_logs[0].hum.value}% Rh`;
+    return `${partnerInfo.data_logs[deviceIndex].hum.value}% Rh`;
   return `-`;
 };
 
@@ -498,159 +503,156 @@ const getOutdoorHumidity = partnerInfo => {
   return `-`;
 };
 
-const getPm25Value = partnerInfo => {
+const getPm25Value = (partnerInfo, deviceIndex) => {
   if (
     partnerInfo &&
     partnerInfo.data_logs &&
-    partnerInfo.data_logs[0] &&
-    partnerInfo.data_logs[0].pm25 &&
-    partnerInfo.data_logs[0].pm25.value
+    partnerInfo.data_logs[deviceIndex] &&
+    partnerInfo.data_logs[deviceIndex].pm25 &&
+    partnerInfo.data_logs[deviceIndex].pm25.value
   )
-    return `${partnerInfo.data_logs[0].pm25.value} ug/m3`;
+    return `${partnerInfo.data_logs[deviceIndex].pm25.value} ug/m3`;
   return `-`;
 };
 
-const getPm10Value = partnerInfo => {
+const getPm10Value = (partnerInfo, deviceIndex) => {
   if (
     partnerInfo &&
     partnerInfo.data_logs &&
-    partnerInfo.data_logs[0] &&
-    partnerInfo.data_logs[0].pm10 &&
-    partnerInfo.data_logs[0].pm10.value
+    partnerInfo.data_logs[deviceIndex] &&
+    partnerInfo.data_logs[deviceIndex].pm10 &&
+    partnerInfo.data_logs[deviceIndex].pm10.value
   )
-    return `${partnerInfo.data_logs[0].pm10.value} ug/m3`;
+    return `${partnerInfo.data_logs[deviceIndex].pm10.value} ug/m3`;
   return `-`;
 };
 
-const gettvocValue = partnerInfo => {
+const gettvocValue = (partnerInfo, deviceIndex) => {
   if (
     partnerInfo &&
     partnerInfo.data_logs &&
-    partnerInfo.data_logs[0] &&
-    partnerInfo.data_logs[0].tvoc &&
-    partnerInfo.data_logs[0].tvoc.value
+    partnerInfo.data_logs[deviceIndex] &&
+    partnerInfo.data_logs[deviceIndex].tvoc &&
+    partnerInfo.data_logs[deviceIndex].tvoc.value
   )
-    return `${partnerInfo.data_logs[0].tvoc.value} ${
+    return `${partnerInfo.data_logs[deviceIndex].tvoc.value} ${
       unique_id === 'uwcSmVLB' ? 'ug/m3' : 'ppb'
     }`;
   return `-`;
 };
 
-const gettco2Value = partnerInfo => {
+const gettco2Value = (partnerInfo, deviceIndex) => {
   if (
     partnerInfo &&
     partnerInfo.data_logs &&
-    partnerInfo.data_logs[0] &&
-    partnerInfo.data_logs[0].co2 &&
-    partnerInfo.data_logs[0].co2.value
+    partnerInfo.data_logs[deviceIndex] &&
+    partnerInfo.data_logs[deviceIndex].co2 &&
+    partnerInfo.data_logs[deviceIndex].co2.value
   )
-    return `${partnerInfo.data_logs[0].co2.value} ppm`;
+    return `${partnerInfo.data_logs[deviceIndex].co2.value} ppm`;
   return `-`;
 };
 
-const gettso2Value = partnerInfo => {
+const gettso2Value = (partnerInfo, deviceIndex) => {
   if (
     partnerInfo &&
     partnerInfo.data_logs &&
-    partnerInfo.data_logs[0] &&
-    partnerInfo.data_logs[0].so2 &&
-    partnerInfo.data_logs[0].so2.value
+    partnerInfo.data_logs[deviceIndex] &&
+    partnerInfo.data_logs[deviceIndex].so2 &&
+    partnerInfo.data_logs[deviceIndex].so2.value
   )
-    return `${partnerInfo.data_logs[0].so2.value} ppb`;
+    return `${partnerInfo.data_logs[deviceIndex].so2.value} ppb`;
   return `-`;
 };
 
-const gettno2Value = partnerInfo => {
+const gettno2Value = (partnerInfo, deviceIndex) => {
   if (
     partnerInfo &&
     partnerInfo.data_logs &&
-    partnerInfo.data_logs[0] &&
-    partnerInfo.data_logs[0].no2 &&
-    partnerInfo.data_logs[0].no2.value
+    partnerInfo.data_logs[deviceIndex] &&
+    partnerInfo.data_logs[deviceIndex].no2 &&
+    partnerInfo.data_logs[deviceIndex].no2.value
   )
-    return `${partnerInfo.data_logs[0].no2.value} ppb`;
+    return `${partnerInfo.data_logs[deviceIndex].no2.value} ppb`;
   return `-`;
 };
 
-const getto3Value = partnerInfo => {
+const getto3Value = (partnerInfo, deviceIndex) => {
   if (
     partnerInfo &&
     partnerInfo.data_logs &&
-    partnerInfo.data_logs[0] &&
-    partnerInfo.data_logs[0].o3 &&
-    partnerInfo.data_logs[0].o3.value
+    partnerInfo.data_logs[deviceIndex] &&
+    partnerInfo.data_logs[deviceIndex].o3 &&
+    partnerInfo.data_logs[deviceIndex].o3.value
   )
-    return `${partnerInfo.data_logs[0].o3.value} ppb`;
+    return `${partnerInfo.data_logs[deviceIndex].o3.value} ppb`;
   return `-`;
 };
 
-const gettcoValue = partnerInfo => {
+const gettcoValue = (partnerInfo, deviceIndex) => {
   if (
     partnerInfo &&
     partnerInfo.data_logs &&
-    partnerInfo.data_logs[0] &&
-    partnerInfo.data_logs[0].co &&
-    partnerInfo.data_logs[0].co.value
+    partnerInfo.data_logs[deviceIndex] &&
+    partnerInfo.data_logs[deviceIndex].co &&
+    partnerInfo.data_logs[deviceIndex].co.value
   )
-    return `${partnerInfo.data_logs[0].co.value} ppb`;
+    return `${partnerInfo.data_logs[deviceIndex].co.value} ppb`;
   return `-`;
 };
 
-const gettch2oValue = partnerInfo => {
+const gettch2oValue = (partnerInfo, deviceIndex) => {
   if (
     partnerInfo &&
     partnerInfo.data_logs &&
-    partnerInfo.data_logs[0] &&
-    partnerInfo.data_logs[0].ch2o &&
-    partnerInfo.data_logs[0].ch2o.value
+    partnerInfo.data_logs[deviceIndex] &&
+    partnerInfo.data_logs[deviceIndex].ch2o &&
+    partnerInfo.data_logs[deviceIndex].ch2o.value
   )
-    return `${partnerInfo.data_logs[0].ch2o.value} ppb`;
+    return `${partnerInfo.data_logs[deviceIndex].ch2o.value} ppb`;
   return `-`;
 };
 
-const getSoundValue = partnerInfo => {
+const getSoundValue = (partnerInfo, deviceIndex) => {
   if (
     partnerInfo &&
     partnerInfo.data_logs &&
-    partnerInfo.data_logs[0] &&
-    partnerInfo.data_logs[0].sound &&
-    partnerInfo.data_logs[0].sound.value
+    partnerInfo.data_logs[deviceIndex] &&
+    partnerInfo.data_logs[deviceIndex].sound &&
+    partnerInfo.data_logs[deviceIndex].sound.value
   )
-    return `${partnerInfo.data_logs[0].sound.value} dBA`;
+    return `${partnerInfo.data_logs[deviceIndex].sound.value} dBA`;
   return `-`;
 };
 
-const getLightValue = partnerInfo => {
+const getLightValue = (partnerInfo, deviceIndex) => {
   if (
     partnerInfo &&
     partnerInfo.data_logs &&
-    partnerInfo.data_logs[0] &&
-    partnerInfo.data_logs[0].light &&
-    partnerInfo.data_logs[0].light.value
+    partnerInfo.data_logs[deviceIndex] &&
+    partnerInfo.data_logs[deviceIndex].light &&
+    partnerInfo.data_logs[deviceIndex].light.value
   )
-    return `${partnerInfo.data_logs[0].light.value} Lux`;
+    return `${partnerInfo.data_logs[deviceIndex].light.value} Lux`;
   return `-`;
 };
 
-const getPm1Value = partnerInfo => {
+const getPm1Value = (partnerInfo, deviceIndex) => {
   if (
     partnerInfo &&
     partnerInfo.data_logs &&
-    partnerInfo.data_logs[0] &&
-    partnerInfo.data_logs[0].pm1 &&
-    partnerInfo.data_logs[0].pm1.value
+    partnerInfo.data_logs[deviceIndex] &&
+    partnerInfo.data_logs[deviceIndex].pm1 &&
+    partnerInfo.data_logs[deviceIndex].pm1.value
   )
-    return `${partnerInfo.data_logs[0].pm1.value} ug/m3`;
+    return `${partnerInfo.data_logs[deviceIndex].pm1.value} ug/m3`;
   return `-`;
 };
-
 
 const getIndoorInfoName = (partnerInfo, index = 0) => {
-  if (!partnerInfo || !partnerInfo.data_logs) return `-`;
+  console.log('inside name index', index);
 
-  const dataLog = partnerInfo.data_logs[0];
-  const parameter = dataLog[getParametersExcludingTempHum(partnerInfo)[index]];
-  console.log('paraaaaa', getParametersExcludingTempHum(partnerInfo)[index]);
+  if (!partnerInfo || !partnerInfo.data_logs) return `-`;
 
   switch (getParametersExcludingTempHum(partnerInfo)[index]) {
     case 'pm25':
@@ -677,24 +679,25 @@ const getIndoorInfoName = (partnerInfo, index = 0) => {
     case 'co':
       return 'co';
 
-      case 'ch2o':
+    case 'ch2o':
       return 'ch2o';
 
-      case 'sound':
-        return 'Sound';
+    case 'sound':
+      return 'Sound';
 
-        case 'light':
-        return 'Light';
+    case 'light':
+      return 'Light';
 
-        case 'pm1':
-        return 'PM1';
+    case 'pm1':
+      return 'PM1';
 
     default:
       return '-';
   }
 };
 
-const getIndoorInfoValue = (partnerInfo, index = 0) => {
+const getIndoorInfoValue = (partnerInfo, index = 0, deviceIndex = 0) => {
+  console.log('device index inside', deviceIndex);
   if (!partnerInfo || !partnerInfo.data_logs) return `-`;
 
   const dataLog = partnerInfo.data_logs[0];
@@ -702,42 +705,40 @@ const getIndoorInfoValue = (partnerInfo, index = 0) => {
 
   switch (getParametersExcludingTempHum(partnerInfo)[index]) {
     case 'pm25':
-      return getPm25Value(partnerInfo);
+      return getPm25Value(partnerInfo, deviceIndex);
 
     case 'pm10':
-      return getPm10Value(partnerInfo);
+      return getPm10Value(partnerInfo, deviceIndex);
 
     case 'tvoc':
-      return gettvocValue(partnerInfo);
+      return gettvocValue(partnerInfo, deviceIndex);
 
     case 'co2':
-      return gettco2Value(partnerInfo);
+      return gettco2Value(partnerInfo, deviceIndex);
 
     case 'so2':
-      return gettso2Value(partnerInfo);
+      return gettso2Value(partnerInfo, deviceIndex);
 
     case 'no2':
-      return gettno2Value(partnerInfo);
+      return gettno2Value(partnerInfo, deviceIndex);
 
     case 'o3':
-      return getto3Value(partnerInfo);
+      return getto3Value(partnerInfo, deviceIndex);
 
     case 'co':
-      return gettcoValue(partnerInfo);
+      return gettcoValue(partnerInfo, deviceIndex);
 
-      case 'ch2o':
-      return gettch2oValue(partnerInfo);
+    case 'ch2o':
+      return gettch2oValue(partnerInfo, deviceIndex);
 
-      case 'sound':
-        return getSoundValue(partnerInfo);
+    case 'sound':
+      return getSoundValue(partnerInfo, deviceIndex);
 
-        case 'light':
-        return getLightValue(partnerInfo);
+    case 'light':
+      return getLightValue(partnerInfo, deviceIndex);
 
-        case 'pm1':
-        return getPm1Value(partnerInfo);
-
-      
+    case 'pm1':
+      return getPm1Value(partnerInfo, deviceIndex);
 
     default:
       return '-';
@@ -751,26 +752,24 @@ const getOutdoorInfoValue = (partnerInfo, index = 0) => {
 
   if (!dataLog[getParametersExcludingTempHum(partnerInfo)[index]]) return '-';
 
-
   console.log(
     'out',
     dataLog[getParametersExcludingTempHum(partnerInfo)[index]],
   );
 
-  
   return `${
     dataLog[getParametersExcludingTempHum(partnerInfo)[index]].value
   } ug/m3`;
 };
 
-const getIndoorInfoValueCondition = (partnerInfo, index = 0) => {
+const getIndoorInfoValueCondition = (
+  partnerInfo,
+  index = 0,
+  deviceIndex = 0,
+) => {
   if (!partnerInfo || !partnerInfo.data_logs) return `-`;
 
-  const dataLog = partnerInfo.data_logs[0];
-  console.log(
-    'connnnn',
-    dataLog[getParametersExcludingTempHum(partnerInfo)[index]],
-  );
+  const dataLog = partnerInfo.data_logs[deviceIndex];
 
   if (!dataLog[getParametersExcludingTempHum(partnerInfo)[index]]) return '-';
 
@@ -793,6 +792,12 @@ const getOutdoorInfoValueCondition = (partnerInfo, index = 0) => {
   return getParameterText(
     dataLog[getParametersExcludingTempHum(partnerInfo)[index]].incident_level,
   );
+};
+
+const getDataLogByIndex = (partnerInfo, index = 0) => {
+  if (!partnerInfo || !partnerInfo.data_logs || !partnerInfo.data_logs[index])
+    return null;
+  return partnerInfo.data_logs[index];
 };
 
 export default getFixedDigitsNumber;
@@ -835,4 +840,5 @@ export {
   getIndoorInfoValueCondition,
   getOutdoorInfoValue,
   getOutdoorInfoValueCondition,
+  getDataLogByIndex,
 };

@@ -11,7 +11,9 @@ import getPartnerInfo from './api/getPartnerInfo';
 
 function App() {
   const ref = useRef({ intervalId: null });
+
   const [partnerData, setPartnerData] = useState(null);
+  const [partnerDataIndex, setPartnerDataIndex] = useState(0);
 
   const urlSearchParams = new URLSearchParams(window.location.search);
   const params = Object.fromEntries(urlSearchParams.entries());
@@ -29,14 +31,20 @@ function App() {
   };
 
   const PartnerDataContextValue = useMemo(
-    () => ({ partnerData, setPartnerData }),
-    [partnerData, setPartnerData],
+    () => ({
+      partnerData,
+      setPartnerData,
+      partnerDataIndex,
+      setPartnerDataIndex,
+    }),
+    [partnerData, setPartnerData, partnerDataIndex, setPartnerDataIndex],
   );
 
   useEffect(() => {
     getPartnerParameters();
   }, []);
 
+  // fetch data after 2 min
   useEffect(() => {
     ref.current.intervalId = setInterval(() => {
       getPartnerParameters();
