@@ -65,7 +65,7 @@ function App() {
     <PartnerDataContext.Provider value={PartnerDataContextValue}>
       <>
         <div className="wrapper">
-          <TopBar outdoorInfo={outdoorInfo} />
+        
           <RootComponent outdoorInfo={outdoorInfo} />
         </div>
 

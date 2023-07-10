@@ -4,7 +4,7 @@ import styles from './styles.module.css';
 import PartnerDataContext from '../../Contexts/PartnerDataContext';
 import { getParametersExcludingTempHum } from '../../UtilityFunctions/Utils';
 
-const TopBar = ({outdoorInfo = false}) => {
+const TopBar = ({ outdoorInfo = false, dataIndex = 0 }) => {
   const { partnerData } = useContext(PartnerDataContext);
 
   const parameterLength = getParametersExcludingTempHum(partnerData).length;
@@ -40,9 +40,9 @@ const TopBar = ({outdoorInfo = false}) => {
         <span>
           {partnerData &&
           partnerData.data_logs &&
-          partnerData.data_logs[0] &&
-          partnerData.data_logs[0].location
-            ? partnerData.data_logs[0].location
+          partnerData.data_logs[dataIndex] &&
+          partnerData.data_logs[dataIndex].node_name
+            ? partnerData.data_logs[dataIndex].node_name
             : ''}{' '}
         </span>
       </div>

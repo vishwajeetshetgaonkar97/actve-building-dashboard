@@ -19,6 +19,7 @@ import styles from './styles.module.css';
 import TemperatureHumidityComponent from '../TemperatureHumidityComponent/TemperatureHumidityComponent';
 import PmValueComponent from '../PmValueComponent/PmValueComponent';
 import OutdoorPmValueComponent from '../OutdoorPmValueComponent/OutdoorPmValueComponent';
+import TopBar from '../TopBar/TopBar';
 
 const RootComponent = ({ outdoorInfo = false }) => {
   const deviceRef = useRef({ intervalId: null });
@@ -60,7 +61,6 @@ const RootComponent = ({ outdoorInfo = false }) => {
       setBuildingIndexInfo(getDataLogByIndex(partnerData, 0));
     }
   };
-
 
   // referesh devices every 5 sec
   useEffect(() => {
@@ -176,6 +176,10 @@ const RootComponent = ({ outdoorInfo = false }) => {
           <DeviceLatestPastLogDataContext.Provider
             value={deviceLatestPastLogDataContextValue}
           >
+            <TopBar
+              outdoorInfo={outdoorInfo}
+              dataIndex={dataIndex.current.index}
+            />
             <div
               className={`${styles.mainContainer} 
             ${parameterLength >= 3 && styles.mainContainer3}
